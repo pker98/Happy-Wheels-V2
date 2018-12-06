@@ -1,9 +1,10 @@
-from models.Car import Car
+from Models.Car import Car
 import csv
 
-class Cars_repo(object):
+class Cars_repo:
     def __init__self(self):
-        self.__cars = []
+        pass
+
 
     # def add_video(self, Car):
     #     # first add to file then to private list
@@ -13,16 +14,19 @@ class Cars_repo(object):
     #         brand = get_video.brand()
     #         Cars_file.write("{},{},{}\n".format(car_size, plate_number, brand))
 
-    def get_videos(self):
-        if self.__cars == []:
-            with open("./data/Cars.txt", "r") as Cars_file:
-                csv_reader = csv.reader(Cars_file)
-                next(csv_reader)
-                car_dict = {}
+    def get_cars(self):
+        car_dict = {}
+        with open("./data/Cars.csv", "r") as Cars_file:
+            csv_reader = csv.reader(Cars_file)
+            next(csv_reader)
+            
+            for line in csv_reader:
+                plate_num, brand, size, location = line
+                new_car = Car(plate_num, brand, size, location)
+                key = new_car.get_plate_number() #key er platenumber
+                value_list = new_car #value_list inniheldur repr fallið
+                                     #0 = name, 1 = Size, 2 = Orders
+                car_dict[key] = value_list
 
-                for line in csv_reader:
-                    car_size, plate_number, brand
-                    new_video = Video(title, genre, length)
-                    self.__videos.append(new_video)    
-        
-        return self.__videos
+        return car_dict
+
