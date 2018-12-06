@@ -13,13 +13,17 @@ class Rent_controller(object):
         self.__location = self.__rent_menu.Page_1()
         # Fá date
         self.__date_list = self.__rent_menu.Page_2()
-        # Fá 
+        # Fá stærð bíls
         self.__vehicle_size = self.__rent_menu.Page_3()
-        #bera saman car_dict og locaton, date_list og size
+        # Bera saman car_dict og locaton, date_list og size
         
-        compare = self.__get_cars.compare_date_size(self.__date_list, \
+        available_car_list = self.__get_cars.compare_date_size(self.__date_list, \
         self.__vehicle_size, self.__location)
-        return compare
+
+        # Fá val bíls
+        self.__car_choice = self.__rent_menu.Page_4(available_car_list)
+
+
 
 
 

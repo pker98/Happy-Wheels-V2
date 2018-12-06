@@ -6,13 +6,12 @@ def main():
     #test = Cars_repo()
     #print(test.get_cars())
 
-    test2 = Rent_controller()
-    print(test2.Rent_page())
-    """
-    while True:
-        test = Cars_repo()
-        test.get_cars()
-        #start_program = Main_controller()
-        #start_program.Main_page()
-"""
+    #test2 = Rent_controller()
+    #print(test2.Rent_page())
+    
+    # test = Cars_repo()
+    # # test.get_cars()
+    start_program = Main_controller()
+    start_program.Main_page()
+
 main()

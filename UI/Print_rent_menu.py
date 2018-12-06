@@ -38,3 +38,9 @@ class Print_rent_menu(object):
 
         choice = input("Choose your vehicle size: ")
         return choice
+    
+    def Page_4(self, available_car_list):
+        for i, car in enumerate(available_car_list):
+            print("Car {}: {}".format(i+1, car.get_brand()))
+        return 0
+        
