@@ -24,9 +24,8 @@ class Cars_repo:
                 plate_num, brand, size, location = line
                 new_car = Car(plate_num, brand, size, location)
                 key = new_car.get_plate_number() #key er platenumber
-                value_list = new_car #value_list inniheldur repr fallið
-                                     #0 = name, 1 = Size, 2 = Orders
-                car_dict[key] = value_list
+              
+                car_dict[key] = new_car
 
         return car_dict
 

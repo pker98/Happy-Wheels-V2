@@ -3,8 +3,8 @@ from Respository.Cars_repo import Cars_repo
 from Controller.Rent_controller import Rent_controller
 
 def main():
-    test = Cars_repo()
-    print(test.get_cars())
+    #test = Cars_repo()
+    #print(test.get_cars())
 
     test2 = Rent_controller()
     print(test2.Rent_page())
