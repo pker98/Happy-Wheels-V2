@@ -36,11 +36,39 @@ class Print_rent_menu(object):
         print("B. Medium cars (from X kr. to Y kr.")    # sem eru cheapest og most expensive bílar
         print("C. SUV (from X kr. to Y kr.")
 
-        choice = input("Choose your vehicle size: ")
-        return choice
+        self.choice = input("Choose your vehicle size: ")
+        return self.choice
     
-    def Page_4(self, available_car_list):
-        for index, car in enumerate(available_car_list):
-            print("Car {}: {}".format(index+1, car.get_brand()))
-        return 0
+    def Page_4(self, available_car_string, size_string):
+        os.system('cls||clear')
+        print(size_string)
+        print(available_car_string)
+        selected_car = input("Choose your desired car: ")
+
+        return selected_car
+        
+    def Page_5(self, car_info):
+        os.system('cls||clear')
+        print(car_info)
+        input("Press enter to confirm.")
+        
+    def Page_6(self):
+        os.system('cls||clear')
+        print("A. GPS ...5.000 kr.")
+        print("B. Extra driver (max 2) ...1.000 kr.")
+        print("C. Insurance (extra) ...6.500 kr.\n")
+        print("Select an additional feature you want to add: ")
+    
+    def Page_7(self, car_info, price, date_info, features):
+        os.system('cls||clear')
+        print(car_info+"\n")
+        print(date_info+"\n")
+        print("~~Aditional features~~")
+        print(features)
+
+        print("Final price: {}".format(price))
+
+        
+
+
         
