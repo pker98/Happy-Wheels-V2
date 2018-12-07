@@ -70,6 +70,8 @@ def main():
             for i in tqdm(range(number)):
                 new_car = generate_car()
                 add_new_car(new_car)
+            print("Installation complete")
+            input("Press enter to continue")
         elif choice == "2":
             choice = input("Are you sure you want to delete all cars from file? (y/n) ")
             if choice == "y":
