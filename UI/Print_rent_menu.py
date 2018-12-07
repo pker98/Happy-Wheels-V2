@@ -22,9 +22,9 @@ class Print_rent_menu(object):
         print("\t~ Date and time ~")
         print("\tPage 2 of 8\n") 
         pick_up_date = input("Enter pick up date(mm/dd/yyyy): ")
-        #pick_up_time = input("Enter pick up time(hh): ")
+        # Pick_up_time = input("Enter pick up time(hh): ")
         drop_off_date = input("Enter drop off date(mm/dd/yyyy): ")
-        #drop_off_time = input("Enter drop off time(hh): ")
+        # Drop_off_time = input("Enter drop off time(hh): ")
 
         return [pick_up_date, drop_off_date]
 
@@ -40,7 +40,7 @@ class Print_rent_menu(object):
         return choice
     
     def Page_4(self, available_car_list):
-        for i, car in enumerate(available_car_list):
-            print("Car {}: {}".format(i+1, car.get_brand()))
+        for index, car in enumerate(available_car_list):
+            print("Car {}: {}".format(index+1, car.get_brand()))
         return 0
         

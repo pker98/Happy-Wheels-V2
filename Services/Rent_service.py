@@ -6,7 +6,7 @@ class Rent_service(object):
         self.car_class = Cars_repo()
        
 
-    def compare_date_size(self, date, size, location):
+    def find_available_cars(self, date, size, location):
         """Get car_dict from repo and get inputs from Rent controller. 
         Compare to get available car."""
         available_car_list = []

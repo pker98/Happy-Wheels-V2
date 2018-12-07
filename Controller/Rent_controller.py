@@ -9,18 +9,18 @@ class Rent_controller(object):
         self.__get_cars = Rent_service()    # Notar input (1-3), finnur staðsetningu, skilar location 
 
     def Rent_page(self):
-        # Fá location
+        # Open location menu - Returns location
         self.__location = self.__rent_menu.Page_1()
-        # Fá date
+        # Open date option menu - Returns pick up- and drop off dates
         self.__date_list = self.__rent_menu.Page_2()
-        # Fá stærð bíls
+        # Open size option menu - Returns size of car
         self.__vehicle_size = self.__rent_menu.Page_3()
-        # Bera saman car_dict og locaton, date_list og size
-        
-        available_car_list = self.__get_cars.compare_date_size(self.__date_list, \
+
+        # Returns available cars with information from user
+        available_car_list = self.__get_cars.find_available_cars(self.__date_list, \
         self.__vehicle_size, self.__location)
 
-        # Fá val bíls
+        # Opens available cars menu - Returns chosen car
         self.__car_choice = self.__rent_menu.Page_4(available_car_list)
 
 

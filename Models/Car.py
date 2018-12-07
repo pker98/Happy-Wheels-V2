@@ -20,6 +20,20 @@ class Car(object):
 
     def get_brand(self):    # Heiti bíls (Frekar name?)
         return self.brand
+
+    def get_pri_ins(self): 
+        """ Returns price and cost of insurance of car """
+        if self.car_size == "1":
+            self.price = 7500
+            self.insurance = 2500
+        elif self.car_size == "2":
+            self.price = 11500
+            self.insurance = 3500
+        elif self.car_size == "3":
+            self.price = 15000
+            self.insurance = 4500
+        return self.price, self.insurance
+
     
     def get_orders(self):
         self.order_list = [[10102018,10162018],[10202018,10222018]]
