@@ -1,4 +1,2000 @@
-﻿Plate number,Brand,Size,Location
-UX026,VW Golf,a,1
-BA123,VW Passat,b,2
-CD456,Toyota Land Cruiser,c,3
+MA-699,Land Cruiser,c,2
+PG-611,Corolla,b,1
+HX-179,Range Rover,c,2
+NU-188,Passat,b,2
+GU-536,Land Cruiser,c,3
+HJ-062,Range Rover,c,3
+BI-680,Legacy,b,3
+CP-013,Legacy,b,1
+PW-329,Golf,a,2
+XC-541,Corolla,b,1
+KH-065,Aygo,a,2
+NT-021,Golf,a,2
+KE-581,Golf,a,3
+WN-971,Land Cruiser,c,2
+DS-964,Corolla,b,2
+WH-510,Legacy,b,2
+FE-262,Golf,a,2
+ZZ-824,Land Cruiser,c,3
+PU-144,Sorento,c,2
+WF-875,Legacy,b,2
+ZW-833,Yaris,a,2
+QR-778,Corolla,b,1
+CN-945,Corolla,b,1
+MR-074,Sorento,c,1
+HE-535,Sorento,c,3
+YP-010,Corolla,b,2
+TC-734,Range Rover,c,3
+DJ-563,Land Cruiser,c,2
+UP-188,Golf,a,2
+XE-547,Passat,b,3
+MF-971,Sorento,c,1
+QD-600,Legacy,b,3
+VY-750,Aygo,a,3
+IL-133,Yaris,a,2
+BT-636,Range Rover,c,3
+QM-302,Legacy,b,3
+UM-216,Passat,b,1
+CZ-563,Passat,b,3
+DO-583,Range Rover,c,1
+NU-980,Sorento,c,1
+RX-859,Legacy,b,1
+CV-934,Land Cruiser,c,2
+CQ-506,Legacy,b,3
+KM-808,Range Rover,c,1
+XK-088,Yaris,a,3
+XG-547,Passat,b,1
+CK-394,Passat,b,1
+WC-533,Range Rover,c,2
+EK-136,Range Rover,c,1
+OQ-106,Sorento,c,3
+QV-973,Corolla,b,1
+WL-817,Sorento,c,1
+WX-486,Golf,a,1
+GE-568,Golf,a,3
+DY-729,Aygo,a,3
+FG-928,Corolla,b,2
+NS-910,Yaris,a,3
+UT-676,Sorento,c,1
+DQ-080,Corolla,b,1
+FY-538,Sorento,c,1
+FK-253,Aygo,a,3
+FT-827,Legacy,b,3
+KA-884,Golf,a,3
+JS-101,Passat,b,2
+SF-426,Legacy,b,2
+EJ-992,Land Cruiser,c,1
+IG-497,Corolla,b,2
+EG-235,Legacy,b,1
+MU-290,Land Cruiser,c,2
+LZ-797,Land Cruiser,c,1
+XQ-893,Range Rover,c,3
+WI-526,Golf,a,1
+DU-444,Golf,a,1
+US-536,Sorento,c,1
+YC-634,Legacy,b,1
+KC-001,Passat,b,1
+BE-111,Golf,a,1
+JH-169,Corolla,b,3
+VH-701,Passat,b,3
+PO-774,Sorento,c,2
+KN-019,Range Rover,c,3
+RG-592,Passat,b,1
+DE-569,Golf,a,1
+RN-596,Yaris,a,2
+WA-325,Sorento,c,2
+QZ-154,Corolla,b,1
+ZV-337,Yaris,a,3
+CN-756,Aygo,a,3
+CF-831,Aygo,a,1
+DF-572,Range Rover,c,3
+FZ-834,Range Rover,c,3
+MS-882,Yaris,a,2
+DM-963,Land Cruiser,c,3
+AF-050,Golf,a,2
+BE-878,Yaris,a,1
+EX-574,Corolla,b,2
+ZG-513,Yaris,a,1
+WI-753,Legacy,b,2
+RX-386,Yaris,a,2
+IV-071,Golf,a,1
+RQ-904,Golf,a,1
+RZ-064,Corolla,b,1
+JN-242,Aygo,a,1
+PF-129,Legacy,b,2
+HX-322,Golf,a,1
+QK-533,Range Rover,c,1
+EY-870,Yaris,a,1
+JY-842,Yaris,a,2
+FH-750,Legacy,b,2
+WB-422,Legacy,b,1
+BH-139,Aygo,a,3
+IV-944,Legacy,b,1
+GO-128,Legacy,b,2
+HI-232,Yaris,a,2
+HJ-366,Range Rover,c,3
+WG-144,Land Cruiser,c,3
+WY-846,Legacy,b,2
+CS-927,Corolla,b,2
+AI-763,Land Cruiser,c,3
+ZP-329,Land Cruiser,c,3
+IZ-570,Aygo,a,2
+MQ-161,Corolla,b,3
+DJ-577,Land Cruiser,c,1
+OA-683,Land Cruiser,c,3
+FL-714,Golf,a,3
+FC-883,Sorento,c,2
+BH-676,Golf,a,3
+ZK-928,Golf,a,2
+XB-340,Corolla,b,1
+YS-432,Aygo,a,2
+ZI-367,Range Rover,c,1
+KI-521,Yaris,a,3
+CC-096,Range Rover,c,3
+NG-369,Yaris,a,2
+CO-105,Yaris,a,1
+NZ-564,Yaris,a,2
+CZ-165,Passat,b,3
+TK-030,Corolla,b,2
+JF-932,Range Rover,c,1
+LD-224,Aygo,a,2
+IU-572,Land Cruiser,c,1
+MN-627,Yaris,a,3
+QS-445,Sorento,c,1
+MF-996,Land Cruiser,c,3
+AF-096,Legacy,b,3
+YT-259,Land Cruiser,c,2
+KV-545,Aygo,a,2
+HE-263,Range Rover,c,2
+DJ-550,Aygo,a,2
+RU-655,Sorento,c,3
+OF-820,Golf,a,2
+XZ-454,Corolla,b,3
+KL-073,Land Cruiser,c,3
+LV-462,Corolla,b,1
+KF-860,Land Cruiser,c,1
+II-307,Corolla,b,2
+BO-050,Yaris,a,2
+IZ-763,Golf,a,3
+SW-212,Corolla,b,3
+FH-668,Land Cruiser,c,1
+MW-837,Sorento,c,1
+LA-460,Corolla,b,2
+FI-710,Golf,a,1
+OP-099,Land Cruiser,c,3
+RT-822,Yaris,a,1
+QN-016,Sorento,c,1
+EH-926,Golf,a,3
+OB-904,Golf,a,3
+CM-452,Corolla,b,3
+IW-964,Legacy,b,1
+PZ-205,Corolla,b,3
+DV-240,Aygo,a,1
+TR-010,Passat,b,3
+DY-382,Corolla,b,2
+JN-992,Golf,a,2
+LB-879,Sorento,c,2
+BY-752,Land Cruiser,c,3
+XS-652,Aygo,a,1
+UW-579,Land Cruiser,c,3
+NJ-156,Aygo,a,1
+QP-709,Aygo,a,3
+QM-430,Corolla,b,2
+GQ-137,Land Cruiser,c,1
+JS-340,Aygo,a,3
+QZ-149,Golf,a,2
+KN-588,Corolla,b,1
+LR-142,Range Rover,c,2
+EZ-078,Land Cruiser,c,3
+IL-020,Legacy,b,1
+AH-397,Aygo,a,2
+JK-617,Sorento,c,3
+WU-475,Aygo,a,1
+GB-800,Legacy,b,2
+TE-871,Passat,b,1
+OS-925,Corolla,b,1
+DK-402,Passat,b,3
+DV-095,Corolla,b,3
+EH-212,Legacy,b,2
+HE-233,Sorento,c,1
+HA-221,Golf,a,3
+NE-583,Sorento,c,3
+PB-944,Sorento,c,2
+SE-859,Yaris,a,3
+YY-561,Range Rover,c,2
+QA-666,Aygo,a,3
+RA-964,Range Rover,c,2
+ME-996,Aygo,a,2
+QJ-109,Land Cruiser,c,3
+EF-584,Legacy,b,3
+MQ-704,Yaris,a,3
+EE-159,Sorento,c,1
+YI-332,Golf,a,1
+GK-235,Legacy,b,2
+FB-356,Golf,a,2
+VH-741,Corolla,b,2
+JK-977,Corolla,b,3
+PV-325,Range Rover,c,2
+PX-301,Sorento,c,2
+TQ-765,Sorento,c,3
+EL-546,Range Rover,c,3
+AY-378,Land Cruiser,c,2
+VR-815,Land Cruiser,c,1
+HV-135,Golf,a,2
+DD-773,Golf,a,3
+PA-036,Yaris,a,3
+BO-902,Golf,a,3
+VD-758,Land Cruiser,c,2
+OQ-427,Passat,b,3
+TY-816,Aygo,a,1
+KX-809,Passat,b,3
+FI-078,Range Rover,c,2
+YZ-881,Yaris,a,3
+KW-516,Range Rover,c,1
+PA-491,Sorento,c,2
+WZ-218,Golf,a,3
+UT-192,Yaris,a,3
+IB-103,Corolla,b,1
+BR-856,Yaris,a,2
+EY-191,Corolla,b,1
+WX-988,Corolla,b,1
+CN-942,Range Rover,c,2
+PE-137,Corolla,b,1
+YS-034,Golf,a,3
+ES-815,Land Cruiser,c,3
+BN-345,Legacy,b,2
+BS-455,Sorento,c,2
+CC-375,Yaris,a,3
+GK-465,Aygo,a,1
+HC-494,Legacy,b,3
+WE-419,Land Cruiser,c,1
+FS-903,Yaris,a,3
+CO-815,Aygo,a,1
+OJ-052,Legacy,b,1
+TC-027,Passat,b,3
+AY-295,Land Cruiser,c,1
+BO-886,Aygo,a,2
+BF-598,Golf,a,3
+BW-157,Passat,b,3
+AE-665,Passat,b,2
+QO-504,Passat,b,2
+CC-950,Legacy,b,1
+WV-359,Range Rover,c,3
+GR-758,Yaris,a,2
+WK-086,Golf,a,2
+GZ-252,Land Cruiser,c,2
+XB-925,Range Rover,c,1
+KH-541,Sorento,c,3
+NJ-760,Golf,a,3
+ME-473,Aygo,a,3
+WS-747,Yaris,a,2
+LU-362,Land Cruiser,c,1
+VO-038,Corolla,b,2
+KD-525,Corolla,b,1
+WI-697,Sorento,c,3
+HJ-866,Legacy,b,1
+UR-530,Yaris,a,3
+YJ-518,Corolla,b,3
+HX-895,Passat,b,1
+HV-046,Land Cruiser,c,3
+KX-592,Aygo,a,3
+IT-853,Passat,b,3
+IV-390,Legacy,b,3
+CC-826,Yaris,a,3
+MF-556,Corolla,b,2
+LN-394,Aygo,a,3
+QY-802,Legacy,b,2
+FR-087,Sorento,c,2
+RD-063,Range Rover,c,2
+IL-659,Land Cruiser,c,3
+TK-548,Passat,b,1
+LF-972,Land Cruiser,c,1
+YB-082,Corolla,b,2
+ND-816,Golf,a,2
+DL-921,Yaris,a,1
+TZ-123,Passat,b,2
+EK-940,Land Cruiser,c,1
+XR-042,Land Cruiser,c,1
+FC-833,Golf,a,2
+OZ-056,Aygo,a,3
+HO-118,Golf,a,1
+YX-500,Land Cruiser,c,1
+QA-257,Passat,b,3
+XW-571,Golf,a,2
+OH-561,Yaris,a,1
+BW-503,Passat,b,2
+HT-390,Aygo,a,1
+CX-112,Range Rover,c,1
+KM-154,Corolla,b,3
+OK-704,Yaris,a,2
+IW-121,Range Rover,c,3
+UO-083,Corolla,b,3
+VJ-081,Sorento,c,1
+KU-770,Yaris,a,1
+TM-126,Yaris,a,3
+SM-444,Sorento,c,3
+NZ-605,Passat,b,2
+GB-261,Golf,a,1
+ZF-786,Golf,a,1
+BR-753,Yaris,a,3
+SQ-781,Aygo,a,3
+RC-757,Land Cruiser,c,2
+UE-837,Sorento,c,2
+ED-904,Aygo,a,3
+TU-998,Range Rover,c,3
+EO-177,Yaris,a,3
+WE-132,Aygo,a,2
+FL-823,Land Cruiser,c,3
+RB-243,Legacy,b,2
+GT-580,Corolla,b,1
+CN-559,Land Cruiser,c,3
+WH-548,Sorento,c,2
+JK-982,Yaris,a,2
+PE-069,Land Cruiser,c,3
+BT-087,Yaris,a,1
+IA-301,Land Cruiser,c,1
+OF-918,Sorento,c,1
+LO-395,Legacy,b,1
+WZ-649,Land Cruiser,c,3
+KP-192,Corolla,b,2
+NO-049,Aygo,a,3
+BD-581,Aygo,a,1
+TR-917,Sorento,c,3
+EQ-868,Sorento,c,3
+YW-306,Aygo,a,2
+NW-721,Land Cruiser,c,2
+DY-216,Land Cruiser,c,1
+NJ-394,Yaris,a,1
+XN-015,Legacy,b,1
+KJ-048,Aygo,a,3
+HO-400,Sorento,c,2
+AB-496,Corolla,b,2
+XA-896,Legacy,b,1
+KG-929,Land Cruiser,c,1
+CR-112,Sorento,c,2
+MS-322,Land Cruiser,c,3
+PB-949,Land Cruiser,c,2
+WG-359,Sorento,c,2
+CU-271,Passat,b,3
+EB-049,Passat,b,2
+CK-182,Yaris,a,1
+LR-672,Corolla,b,1
+ZZ-446,Yaris,a,1
+PP-831,Sorento,c,1
+II-977,Corolla,b,3
+TJ-434,Golf,a,3
+FP-222,Aygo,a,3
+WP-380,Corolla,b,3
+TT-451,Aygo,a,3
+QL-149,Legacy,b,1
+EX-172,Aygo,a,1
+HL-492,Corolla,b,3
+DB-925,Legacy,b,1
+XG-244,Legacy,b,2
+QB-977,Corolla,b,1
+HQ-307,Golf,a,1
+PO-933,Yaris,a,3
+RN-221,Golf,a,2
+VV-963,Golf,a,3
+EP-416,Sorento,c,2
+TG-399,Legacy,b,3
+RU-943,Legacy,b,3
+ZY-681,Sorento,c,2
+UO-958,Aygo,a,1
+GD-242,Passat,b,3
+PR-505,Legacy,b,3
+VT-084,Aygo,a,2
+IJ-254,Sorento,c,2
+GD-682,Land Cruiser,c,3
+OR-406,Range Rover,c,1
+JK-524,Land Cruiser,c,2
+TD-325,Corolla,b,3
+LK-136,Aygo,a,2
+GN-109,Aygo,a,1
+EZ-369,Yaris,a,2
+RB-696,Golf,a,2
+BF-686,Passat,b,2
+YL-153,Land Cruiser,c,2
+UB-853,Passat,b,1
+UI-360,Legacy,b,3
+DY-336,Golf,a,1
+GV-579,Sorento,c,2
+DL-999,Passat,b,1
+DJ-462,Range Rover,c,2
+HO-471,Corolla,b,2
+SI-923,Passat,b,2
+FV-583,Sorento,c,1
+HE-545,Legacy,b,1
+VY-353,Range Rover,c,3
+ZE-437,Land Cruiser,c,1
+OS-983,Aygo,a,3
+VU-980,Golf,a,3
+KQ-932,Legacy,b,2
+YY-686,Legacy,b,1
+KC-857,Golf,a,1
+SD-738,Yaris,a,1
+MV-834,Passat,b,3
+DN-180,Corolla,b,3
+UT-185,Golf,a,1
+RP-926,Aygo,a,1
+UX-600,Legacy,b,3
+LB-968,Yaris,a,2
+TF-275,Range Rover,c,3
+RS-668,Legacy,b,3
+FL-797,Corolla,b,1
+CD-081,Aygo,a,2
+WA-619,Golf,a,2
+AL-743,Range Rover,c,1
+HD-579,Range Rover,c,1
+GD-929,Sorento,c,3
+OX-756,Corolla,b,2
+LD-457,Yaris,a,1
+PL-765,Land Cruiser,c,3
+CE-388,Sorento,c,2
+WH-591,Passat,b,1
+SK-874,Corolla,b,2
+CC-884,Sorento,c,3
+VH-816,Yaris,a,1
+TS-415,Golf,a,2
+CP-436,Range Rover,c,2
+SI-565,Golf,a,3
+LY-683,Yaris,a,2
+GE-360,Corolla,b,1
+VU-544,Corolla,b,3
+RY-030,Aygo,a,3
+EV-612,Land Cruiser,c,2
+FX-783,Passat,b,3
+WS-972,Corolla,b,1
+JZ-733,Golf,a,2
+ED-326,Sorento,c,1
+OA-169,Sorento,c,3
+GN-437,Corolla,b,3
+YG-041,Legacy,b,2
+OA-162,Range Rover,c,3
+JC-782,Aygo,a,3
+IH-209,Yaris,a,2
+IS-630,Land Cruiser,c,1
+FD-527,Range Rover,c,2
+OF-510,Corolla,b,2
+AM-064,Legacy,b,3
+MM-448,Passat,b,1
+LE-784,Golf,a,3
+GO-509,Corolla,b,3
+VA-339,Aygo,a,1
+DC-866,Sorento,c,1
+WX-261,Range Rover,c,3
+NF-831,Passat,b,3
+RL-402,Range Rover,c,1
+XY-409,Aygo,a,3
+XE-408,Corolla,b,3
+YB-037,Range Rover,c,2
+ZN-416,Golf,a,1
+OH-901,Sorento,c,1
+QE-928,Legacy,b,2
+SO-820,Land Cruiser,c,1
+HC-636,Range Rover,c,2
+XN-522,Range Rover,c,1
+BT-123,Legacy,b,3
+NH-889,Sorento,c,3
+UD-350,Passat,b,3
+AW-460,Golf,a,2
+EA-086,Legacy,b,3
+IU-611,Land Cruiser,c,2
+EX-886,Sorento,c,1
+YW-202,Land Cruiser,c,3
+EC-065,Corolla,b,2
+UX-173,Range Rover,c,3
+LU-845,Aygo,a,1
+SR-011,Passat,b,1
+FW-482,Aygo,a,3
+MI-031,Passat,b,1
+LE-553,Range Rover,c,3
+EQ-799,Yaris,a,3
+WI-976,Corolla,b,3
+UJ-634,Range Rover,c,1
+IL-633,Passat,b,1
+ED-823,Sorento,c,3
+VU-514,Passat,b,2
+TA-797,Range Rover,c,2
+SX-217,Legacy,b,3
+YP-601,Aygo,a,1
+PK-451,Land Cruiser,c,2
+MP-265,Sorento,c,2
+PA-860,Passat,b,3
+IM-329,Golf,a,1
+FY-114,Yaris,a,3
+GC-558,Corolla,b,2
+XF-638,Golf,a,3
+WC-715,Sorento,c,1
+AB-683,Corolla,b,2
+TH-329,Aygo,a,3
+RM-995,Golf,a,1
+YV-646,Passat,b,3
+XZ-171,Yaris,a,3
+LV-755,Range Rover,c,3
+WK-076,Range Rover,c,2
+CC-449,Legacy,b,2
+RK-262,Yaris,a,3
+NV-891,Range Rover,c,2
+IJ-929,Passat,b,3
+YE-830,Aygo,a,3
+JO-864,Range Rover,c,2
+YQ-541,Passat,b,2
+ZK-048,Yaris,a,3
+XI-336,Sorento,c,3
+XM-680,Range Rover,c,2
+LG-648,Yaris,a,3
+GQ-111,Golf,a,3
+XY-737,Range Rover,c,2
+WE-049,Land Cruiser,c,2
+GQ-951,Passat,b,1
+NV-195,Sorento,c,1
+FA-666,Aygo,a,3
+DY-311,Aygo,a,2
+JS-348,Aygo,a,1
+SG-120,Land Cruiser,c,1
+GQ-016,Range Rover,c,2
+GI-467,Range Rover,c,3
+FP-125,Passat,b,2
+SU-144,Sorento,c,1
+XU-897,Passat,b,1
+XQ-019,Sorento,c,3
+TM-965,Aygo,a,3
+ET-909,Yaris,a,1
+RG-393,Yaris,a,3
+JA-143,Aygo,a,3
+AX-051,Yaris,a,2
+RY-474,Sorento,c,1
+II-485,Corolla,b,3
+WW-676,Passat,b,1
+HD-563,Sorento,c,1
+MB-010,Passat,b,2
+VB-969,Sorento,c,3
+DX-492,Legacy,b,3
+RQ-892,Land Cruiser,c,3
+OT-524,Yaris,a,1
+KM-214,Sorento,c,3
+UD-041,Golf,a,3
+SH-071,Passat,b,1
+AA-838,Land Cruiser,c,1
+WT-324,Yaris,a,1
+JL-344,Legacy,b,2
+EO-028,Range Rover,c,2
+VH-519,Corolla,b,2
+WT-668,Passat,b,1
+IZ-207,Land Cruiser,c,1
+US-012,Yaris,a,1
+FO-460,Land Cruiser,c,2
+XJ-236,Passat,b,3
+IN-940,Legacy,b,3
+AA-371,Range Rover,c,2
+XA-035,Yaris,a,1
+QP-397,Sorento,c,3
+GQ-631,Sorento,c,1
+NS-933,Sorento,c,2
+LK-831,Aygo,a,3
+FR-761,Sorento,c,3
+VZ-863,Legacy,b,2
+IS-099,Land Cruiser,c,1
+FS-610,Corolla,b,1
+EZ-509,Legacy,b,3
+KE-431,Corolla,b,2
+NP-557,Golf,a,3
+NJ-687,Land Cruiser,c,1
+PV-712,Golf,a,2
+MD-524,Yaris,a,3
+VY-266,Yaris,a,2
+LU-639,Golf,a,3
+BU-378,Legacy,b,1
+CL-547,Yaris,a,3
+JV-139,Passat,b,1
+SF-716,Legacy,b,1
+KG-237,Legacy,b,3
+GM-174,Land Cruiser,c,2
+QK-294,Golf,a,3
+KJ-755,Land Cruiser,c,1
+FA-776,Corolla,b,1
+HG-886,Aygo,a,3
+JR-065,Yaris,a,2
+RZ-959,Aygo,a,3
+XI-460,Sorento,c,1
+IP-090,Legacy,b,1
+YS-928,Aygo,a,3
+UY-465,Yaris,a,3
+JY-096,Passat,b,2
+TE-139,Passat,b,1
+WJ-913,Golf,a,2
+OU-241,Legacy,b,1
+LO-479,Yaris,a,3
+BY-897,Passat,b,1
+CV-533,Corolla,b,2
+OI-499,Golf,a,2
+HO-893,Aygo,a,2
+RL-432,Land Cruiser,c,2
+EH-572,Aygo,a,3
+MQ-853,Land Cruiser,c,2
+KM-051,Yaris,a,1
+TE-243,Yaris,a,3
+CO-849,Golf,a,2
+ID-446,Yaris,a,1
+DH-748,Range Rover,c,2
+UD-972,Yaris,a,2
+ZR-231,Land Cruiser,c,1
+SF-680,Corolla,b,1
+PR-880,Corolla,b,2
+DU-873,Corolla,b,1
+KE-817,Yaris,a,3
+RR-247,Passat,b,2
+UF-529,Sorento,c,2
+CG-349,Range Rover,c,1
+GH-004,Aygo,a,3
+WL-670,Aygo,a,1
+AY-755,Aygo,a,2
+WC-833,Legacy,b,1
+HT-835,Land Cruiser,c,1
+AE-462,Range Rover,c,2
+WH-767,Range Rover,c,1
+GI-079,Corolla,b,3
+PR-007,Range Rover,c,1
+ZW-138,Yaris,a,1
+WL-842,Corolla,b,2
+BD-718,Yaris,a,2
+HL-332,Land Cruiser,c,1
+EE-164,Corolla,b,3
+BZ-189,Golf,a,1
+ZF-083,Aygo,a,3
+MN-998,Legacy,b,3
+LB-367,Range Rover,c,3
+VY-308,Land Cruiser,c,1
+PJ-142,Golf,a,3
+LV-337,Corolla,b,2
+SG-666,Passat,b,2
+VH-424,Range Rover,c,1
+OQ-242,Golf,a,3
+BA-266,Aygo,a,2
+NZ-071,Aygo,a,1
+MS-579,Aygo,a,2
+PK-713,Land Cruiser,c,1
+HS-959,Corolla,b,3
+AU-054,Aygo,a,1
+DU-047,Legacy,b,3
+TR-165,Range Rover,c,1
+BN-107,Sorento,c,3
+LJ-258,Range Rover,c,3
+DF-381,Golf,a,3
+DY-177,Passat,b,3
+HM-467,Aygo,a,3
+OZ-148,Sorento,c,2
+MD-836,Legacy,b,3
+CT-582,Legacy,b,1
+YS-821,Yaris,a,1
+KK-612,Corolla,b,3
+CN-038,Yaris,a,2
+CM-290,Passat,b,1
+CM-138,Range Rover,c,1
+QX-992,Golf,a,2
+XP-909,Passat,b,2
+SZ-492,Golf,a,2
+GX-805,Range Rover,c,3
+TD-411,Sorento,c,3
+JW-816,Passat,b,2
+NO-208,Aygo,a,3
+TT-910,Legacy,b,3
+YB-520,Land Cruiser,c,1
+ZN-480,Yaris,a,1
+BA-746,Passat,b,3
+PL-094,Aygo,a,3
+XP-326,Golf,a,3
+FX-502,Legacy,b,2
+UN-797,Land Cruiser,c,1
+DO-524,Legacy,b,3
+RE-882,Aygo,a,2
+JX-219,Range Rover,c,1
+JY-841,Range Rover,c,1
+LE-133,Corolla,b,2
+QY-084,Sorento,c,3
+RA-705,Yaris,a,1
+JQ-536,Sorento,c,3
+BE-589,Land Cruiser,c,3
+RN-164,Land Cruiser,c,3
+TA-883,Yaris,a,3
+NV-692,Range Rover,c,3
+UR-028,Legacy,b,1
+JM-186,Golf,a,2
+RA-656,Legacy,b,3
+DD-858,Golf,a,1
+MJ-756,Passat,b,3
+GM-552,Range Rover,c,3
+XN-797,Sorento,c,1
+PV-350,Corolla,b,3
+QM-225,Range Rover,c,1
+AK-598,Range Rover,c,1
+JR-552,Golf,a,3
+YC-759,Yaris,a,3
+MU-872,Corolla,b,1
+PN-462,Sorento,c,1
+JD-574,Yaris,a,1
+RG-127,Aygo,a,3
+PB-200,Yaris,a,2
+SK-415,Legacy,b,1
+BT-179,Sorento,c,1
+IP-406,Sorento,c,1
+AT-613,Yaris,a,2
+RS-577,Yaris,a,3
+CF-753,Corolla,b,3
+EH-378,Golf,a,1
+PI-296,Range Rover,c,1
+SC-254,Range Rover,c,1
+PU-265,Aygo,a,2
+FW-370,Golf,a,1
+LD-771,Yaris,a,2
+NX-940,Legacy,b,2
+ZI-998,Land Cruiser,c,2
+BL-021,Sorento,c,2
+CF-142,Sorento,c,1
+BD-745,Range Rover,c,1
+CD-346,Corolla,b,2
+CD-696,Land Cruiser,c,3
+JC-711,Legacy,b,2
+RJ-908,Sorento,c,1
+KN-445,Legacy,b,2
+RJ-974,Aygo,a,1
+QG-960,Aygo,a,3
+BH-905,Sorento,c,3
+AS-206,Land Cruiser,c,2
+FN-931,Passat,b,2
+IT-100,Golf,a,2
+KF-350,Range Rover,c,1
+HI-133,Yaris,a,1
+OW-401,Yaris,a,2
+NF-248,Legacy,b,2
+PB-001,Aygo,a,2
+QP-430,Aygo,a,2
+LM-274,Golf,a,1
+LL-175,Corolla,b,2
+XE-133,Passat,b,3
+WL-616,Passat,b,1
+OR-785,Legacy,b,2
+FE-994,Aygo,a,1
+OT-631,Range Rover,c,1
+ZO-577,Range Rover,c,2
+ML-166,Yaris,a,3
+RA-621,Sorento,c,3
+WB-890,Sorento,c,2
+VB-005,Legacy,b,3
+HU-263,Legacy,b,3
+VD-658,Corolla,b,1
+AS-730,Aygo,a,1
+LL-516,Yaris,a,2
+XQ-267,Yaris,a,1
+PE-831,Land Cruiser,c,2
+MA-671,Golf,a,3
+BV-557,Passat,b,3
+JW-636,Yaris,a,3
+ZC-572,Yaris,a,2
+RY-602,Sorento,c,3
+VT-769,Corolla,b,2
+UU-983,Sorento,c,3
+UB-380,Range Rover,c,2
+GS-128,Sorento,c,2
+TT-325,Land Cruiser,c,1
+OV-183,Sorento,c,3
+ZG-728,Corolla,b,3
+HF-917,Aygo,a,2
+SC-456,Yaris,a,2
+HI-761,Sorento,c,1
+RU-891,Corolla,b,1
+SF-451,Sorento,c,3
+HX-613,Sorento,c,3
+VO-881,Legacy,b,3
+CL-597,Aygo,a,1
+PF-739,Sorento,c,1
+SW-990,Legacy,b,3
+FQ-288,Sorento,c,1
+EA-556,Land Cruiser,c,3
+JJ-103,Corolla,b,3
+UW-953,Land Cruiser,c,1
+TU-368,Golf,a,1
+ME-961,Corolla,b,2
+UI-444,Passat,b,2
+AQ-219,Legacy,b,3
+IX-206,Aygo,a,2
+UB-321,Yaris,a,3
+GK-706,Range Rover,c,1
+NT-169,Yaris,a,1
+RI-749,Range Rover,c,2
+IP-869,Corolla,b,3
+FS-154,Yaris,a,2
+DK-613,Yaris,a,2
+HE-327,Aygo,a,3
+LV-771,Aygo,a,3
+EY-397,Yaris,a,3
+RQ-463,Aygo,a,3
+VD-405,Passat,b,3
+SI-169,Sorento,c,3
+CV-852,Passat,b,1
+VA-152,Land Cruiser,c,1
+DM-938,Corolla,b,2
+KQ-662,Golf,a,1
+TM-842,Aygo,a,2
+LD-751,Land Cruiser,c,2
+XB-114,Passat,b,1
+SF-138,Land Cruiser,c,2
+RP-715,Passat,b,1
+ZN-306,Aygo,a,1
+IH-073,Range Rover,c,1
+FX-910,Corolla,b,1
+JX-529,Golf,a,1
+YW-544,Range Rover,c,1
+RW-326,Corolla,b,3
+EA-354,Yaris,a,3
+AU-936,Yaris,a,1
+EH-271,Corolla,b,3
+BD-190,Passat,b,2
+LS-713,Aygo,a,3
+YR-798,Yaris,a,3
+RL-194,Corolla,b,1
+IW-056,Golf,a,1
+UX-954,Aygo,a,1
+MW-579,Corolla,b,2
+XV-732,Passat,b,1
+CO-594,Corolla,b,1
+LA-232,Aygo,a,1
+IC-283,Corolla,b,3
+AS-530,Corolla,b,2
+ET-989,Passat,b,3
+XD-840,Passat,b,3
+LN-917,Sorento,c,2
+ZU-254,Golf,a,1
+CI-792,Sorento,c,2
+AU-491,Range Rover,c,3
+LL-615,Land Cruiser,c,1
+SW-477,Yaris,a,3
+OC-212,Land Cruiser,c,1
+GZ-543,Corolla,b,3
+FQ-733,Passat,b,1
+JX-856,Land Cruiser,c,2
+ZF-089,Sorento,c,3
+BX-661,Golf,a,1
+YY-059,Range Rover,c,1
+AL-820,Golf,a,3
+DC-201,Aygo,a,3
+KW-836,Legacy,b,2
+LL-686,Yaris,a,1
+PP-879,Golf,a,2
+HS-403,Aygo,a,1
+YF-340,Aygo,a,2
+GO-899,Legacy,b,1
+UL-936,Land Cruiser,c,3
+ZH-179,Land Cruiser,c,3
+YD-607,Yaris,a,3
+YX-082,Corolla,b,3
+DX-446,Legacy,b,3
+ZS-705,Aygo,a,1
+HX-069,Corolla,b,3
+ED-806,Corolla,b,3
+PR-025,Land Cruiser,c,3
+JR-335,Corolla,b,3
+MH-074,Sorento,c,3
+PY-555,Golf,a,1
+MT-713,Land Cruiser,c,2
+CI-859,Land Cruiser,c,1
+ZT-287,Passat,b,3
+KK-562,Passat,b,3
+OV-303,Golf,a,2
+QE-259,Range Rover,c,2
+XX-318,Aygo,a,2
+BJ-432,Range Rover,c,1
+NS-865,Corolla,b,1
+RB-016,Yaris,a,3
+NV-377,Corolla,b,2
+QI-161,Golf,a,2
+GH-871,Range Rover,c,3
+AH-046,Corolla,b,3
+DP-509,Legacy,b,2
+HP-925,Yaris,a,3
+UQ-236,Yaris,a,1
+DW-220,Sorento,c,3
+VG-481,Corolla,b,1
+TM-732,Yaris,a,3
+NP-844,Aygo,a,3
+DT-693,Yaris,a,1
+DA-018,Land Cruiser,c,2
+XN-646,Aygo,a,1
+HN-074,Range Rover,c,2
+HO-680,Sorento,c,2
+FY-630,Legacy,b,3
+YA-084,Passat,b,2
+WL-852,Passat,b,1
+MB-793,Aygo,a,1
+AV-863,Corolla,b,1
+JA-437,Corolla,b,3
+KU-707,Golf,a,1
+RJ-960,Aygo,a,3
+UP-400,Yaris,a,2
+WM-462,Passat,b,1
+PR-371,Range Rover,c,1
+QF-931,Corolla,b,2
+AO-869,Corolla,b,3
+FF-321,Corolla,b,3
+UJ-972,Legacy,b,2
+DQ-816,Land Cruiser,c,3
+HT-477,Golf,a,3
+PT-406,Land Cruiser,c,3
+YO-423,Sorento,c,3
+SG-406,Golf,a,1
+OD-829,Passat,b,2
+FO-583,Land Cruiser,c,2
+FS-404,Aygo,a,1
+UH-223,Aygo,a,3
+MA-227,Range Rover,c,2
+HH-719,Aygo,a,1
+SD-477,Corolla,b,1
+LN-951,Legacy,b,1
+KU-669,Aygo,a,3
+MA-627,Sorento,c,3
+TE-253,Golf,a,1
+PG-158,Legacy,b,3
+AU-134,Yaris,a,2
+ZZ-114,Aygo,a,1
+ZV-052,Sorento,c,1
+JU-234,Land Cruiser,c,2
+NR-337,Passat,b,3
+MB-740,Golf,a,3
+LJ-436,Aygo,a,3
+VD-157,Yaris,a,1
+EN-581,Aygo,a,2
+WQ-849,Legacy,b,3
+ZT-720,Range Rover,c,1
+BD-918,Range Rover,c,1
+QV-834,Legacy,b,1
+IQ-493,Corolla,b,3
+BU-903,Aygo,a,3
+VK-802,Passat,b,3
+LQ-500,Range Rover,c,3
+JF-887,Aygo,a,2
+NX-341,Land Cruiser,c,1
+GS-477,Golf,a,1
+RA-929,Sorento,c,1
+WR-833,Land Cruiser,c,3
+ML-392,Yaris,a,3
+TV-502,Yaris,a,1
+UT-365,Range Rover,c,3
+DM-191,Range Rover,c,3
+PW-462,Land Cruiser,c,1
+SE-484,Golf,a,2
+PU-403,Legacy,b,1
+KF-683,Sorento,c,1
+WO-942,Aygo,a,1
+VM-374,Golf,a,2
+GF-332,Passat,b,1
+FW-138,Legacy,b,3
+NV-607,Yaris,a,1
+MY-756,Sorento,c,3
+JI-660,Passat,b,3
+GL-069,Sorento,c,1
+UC-781,Golf,a,3
+RT-220,Range Rover,c,1
+MN-906,Aygo,a,2
+ZY-184,Legacy,b,3
+TS-292,Range Rover,c,2
+NI-927,Corolla,b,2
+HJ-705,Land Cruiser,c,2
+BU-687,Aygo,a,2
+WD-969,Land Cruiser,c,3
+QH-396,Aygo,a,2
+YY-966,Yaris,a,1
+OD-975,Range Rover,c,2
+GY-094,Golf,a,1
+HZ-616,Legacy,b,1
+XA-699,Land Cruiser,c,3
+RN-812,Aygo,a,2
+UY-160,Land Cruiser,c,2
+FF-984,Yaris,a,2
+IJ-197,Passat,b,2
+CP-546,Passat,b,1
+OO-203,Corolla,b,3
+FO-952,Corolla,b,3
+RA-393,Golf,a,3
+UY-048,Sorento,c,2
+MC-394,Yaris,a,2
+KN-177,Legacy,b,1
+QU-608,Land Cruiser,c,3
+GL-615,Corolla,b,3
+GN-038,Range Rover,c,3
+HY-994,Golf,a,2
+HH-823,Golf,a,1
+GJ-058,Range Rover,c,2
+JT-999,Yaris,a,2
+QE-639,Range Rover,c,1
+DQ-282,Aygo,a,2
+VK-254,Land Cruiser,c,2
+CI-558,Yaris,a,3
+FZ-792,Range Rover,c,2
+EV-328,Land Cruiser,c,3
+KW-314,Land Cruiser,c,3
+XT-130,Aygo,a,3
+DH-644,Legacy,b,1
+NU-730,Range Rover,c,3
+RT-822,Aygo,a,2
+ZW-224,Sorento,c,3
+AL-158,Range Rover,c,2
+XZ-213,Sorento,c,2
+UY-932,Range Rover,c,1
+EA-439,Passat,b,1
+IQ-780,Sorento,c,1
+FC-695,Aygo,a,1
+EX-764,Aygo,a,2
+RS-427,Golf,a,3
+ZC-427,Corolla,b,3
+UH-669,Land Cruiser,c,2
+PI-901,Corolla,b,1
+SJ-689,Land Cruiser,c,3
+WN-490,Golf,a,1
+GI-003,Land Cruiser,c,1
+NC-113,Aygo,a,1
+MZ-889,Yaris,a,1
+XD-634,Golf,a,3
+DF-564,Range Rover,c,2
+FO-999,Corolla,b,1
+DO-191,Land Cruiser,c,3
+AZ-175,Golf,a,2
+JQ-304,Golf,a,1
+PN-964,Land Cruiser,c,1
+AT-369,Legacy,b,1
+OX-760,Legacy,b,3
+VK-504,Golf,a,3
+SV-492,Golf,a,1
+NT-837,Aygo,a,2
+OV-833,Passat,b,3
+LH-016,Land Cruiser,c,2
+JN-892,Legacy,b,3
+OC-474,Range Rover,c,3
+EN-620,Yaris,a,1
+WN-437,Yaris,a,2
+BZ-148,Aygo,a,3
+GC-559,Sorento,c,2
+HB-671,Aygo,a,1
+AC-928,Sorento,c,3
+JJ-952,Land Cruiser,c,1
+KX-114,Passat,b,2
+CE-221,Corolla,b,3
+RQ-699,Range Rover,c,3
+JR-321,Corolla,b,1
+KZ-659,Range Rover,c,3
+KL-214,Passat,b,1
+HC-429,Legacy,b,3
+YP-114,Legacy,b,3
+DH-280,Range Rover,c,1
+HS-702,Legacy,b,3
+SP-996,Yaris,a,2
+MG-423,Sorento,c,3
+YI-445,Corolla,b,2
+VM-867,Legacy,b,3
+SH-134,Golf,a,3
+AS-506,Aygo,a,2
+BW-118,Passat,b,3
+UE-950,Legacy,b,2
+OX-666,Range Rover,c,2
+YA-526,Passat,b,1
+GL-669,Legacy,b,1
+XI-585,Aygo,a,3
+SL-396,Sorento,c,2
+DL-657,Aygo,a,3
+XA-493,Golf,a,1
+BP-269,Aygo,a,1
+LN-862,Land Cruiser,c,3
+QD-936,Yaris,a,2
+CA-341,Land Cruiser,c,1
+WR-623,Land Cruiser,c,3
+FT-845,Sorento,c,1
+IQ-942,Yaris,a,3
+DZ-567,Corolla,b,3
+CH-128,Yaris,a,2
+RF-807,Passat,b,3
+US-356,Range Rover,c,1
+WZ-155,Legacy,b,3
+ZM-573,Sorento,c,1
+IA-030,Passat,b,3
+TZ-926,Yaris,a,2
+FH-431,Range Rover,c,3
+CI-685,Range Rover,c,1
+GG-793,Yaris,a,2
+YQ-059,Golf,a,2
+HD-495,Legacy,b,1
+VG-285,Aygo,a,1
+UL-889,Land Cruiser,c,1
+KS-652,Aygo,a,2
+BS-435,Range Rover,c,3
+SH-049,Aygo,a,3
+VV-100,Land Cruiser,c,2
+NL-190,Yaris,a,1
+UU-265,Corolla,b,3
+VN-389,Land Cruiser,c,2
+OR-240,Sorento,c,3
+CF-060,Yaris,a,2
+YO-380,Golf,a,1
+VI-862,Sorento,c,1
+GA-135,Range Rover,c,3
+NG-506,Aygo,a,1
+SU-909,Range Rover,c,1
+IG-725,Sorento,c,3
+VX-167,Aygo,a,2
+ZL-720,Corolla,b,1
+OV-519,Range Rover,c,3
+PT-789,Range Rover,c,1
+EF-212,Land Cruiser,c,1
+VR-241,Yaris,a,3
+WV-751,Sorento,c,2
+WD-084,Aygo,a,2
+SE-987,Sorento,c,3
+GV-901,Land Cruiser,c,1
+CD-413,Corolla,b,3
+VY-719,Golf,a,3
+BH-612,Golf,a,2
+OV-003,Legacy,b,2
+IG-998,Yaris,a,3
+ZI-070,Yaris,a,2
+TX-990,Range Rover,c,2
+KF-221,Passat,b,2
+OR-480,Yaris,a,3
+ST-324,Range Rover,c,1
+PV-427,Legacy,b,1
+FS-225,Yaris,a,3
+NZ-985,Passat,b,2
+KR-213,Legacy,b,1
+TF-111,Golf,a,1
+FW-483,Golf,a,1
+KQ-565,Land Cruiser,c,3
+TU-627,Sorento,c,3
+FU-589,Yaris,a,2
+AN-880,Passat,b,1
+GK-433,Passat,b,2
+EE-758,Range Rover,c,2
+HF-557,Range Rover,c,2
+GX-798,Land Cruiser,c,1
+EM-195,Passat,b,2
+RO-702,Legacy,b,3
+SK-495,Passat,b,3
+GH-466,Range Rover,c,3
+HK-476,Aygo,a,1
+LL-646,Aygo,a,3
+CS-354,Corolla,b,2
+GB-379,Aygo,a,3
+DI-580,Range Rover,c,2
+YY-452,Yaris,a,3
+ZB-300,Legacy,b,2
+NF-447,Aygo,a,3
+NN-864,Passat,b,3
+YP-696,Sorento,c,3
+BU-534,Range Rover,c,2
+ZN-533,Sorento,c,1
+KN-875,Corolla,b,3
+OU-791,Range Rover,c,2
+VJ-131,Golf,a,1
+WS-653,Legacy,b,2
+CU-774,Yaris,a,1
+NB-319,Aygo,a,2
+LH-542,Corolla,b,3
+CD-333,Corolla,b,3
+HI-877,Golf,a,2
+EA-348,Corolla,b,2
+QZ-155,Legacy,b,3
+PN-070,Legacy,b,3
+CX-965,Golf,a,2
+LV-989,Land Cruiser,c,3
+NF-257,Passat,b,2
+NS-679,Corolla,b,2
+ZP-739,Yaris,a,2
+ZF-192,Range Rover,c,2
+WO-336,Legacy,b,3
+VN-344,Yaris,a,2
+BO-133,Legacy,b,1
+ZJ-271,Land Cruiser,c,1
+EU-444,Range Rover,c,3
+UX-335,Sorento,c,1
+DS-647,Yaris,a,1
+LL-633,Passat,b,1
+QX-286,Golf,a,2
+GV-261,Golf,a,2
+IR-519,Aygo,a,1
+CY-456,Land Cruiser,c,3
+KG-640,Aygo,a,2
+LV-945,Sorento,c,1
+BN-960,Aygo,a,2
+UT-115,Land Cruiser,c,2
+VT-274,Sorento,c,2
+CB-259,Legacy,b,2
+VC-721,Range Rover,c,3
+BJ-414,Passat,b,1
+LG-888,Corolla,b,3
+LR-051,Yaris,a,3
+PM-285,Passat,b,1
+CJ-188,Legacy,b,2
+ZH-662,Aygo,a,2
+EF-462,Sorento,c,1
+VB-100,Aygo,a,3
+OB-139,Sorento,c,3
+XI-960,Land Cruiser,c,3
+JH-840,Range Rover,c,1
+TJ-757,Sorento,c,2
+NQ-250,Passat,b,3
+NH-366,Aygo,a,3
+IK-579,Corolla,b,1
+SG-044,Sorento,c,1
+PY-053,Passat,b,1
+AX-342,Sorento,c,3
+OS-780,Aygo,a,1
+CM-971,Land Cruiser,c,1
+EJ-723,Sorento,c,1
+IL-884,Land Cruiser,c,2
+QG-479,Range Rover,c,2
+PQ-168,Yaris,a,1
+YK-015,Passat,b,1
+ND-623,Passat,b,2
+NK-855,Land Cruiser,c,2
+LN-826,Passat,b,1
+TD-505,Passat,b,1
+OL-426,Land Cruiser,c,1
+HA-902,Aygo,a,2
+XD-666,Passat,b,2
+WB-395,Aygo,a,3
+ZV-665,Sorento,c,3
+FK-297,Aygo,a,1
+ET-721,Golf,a,3
+UL-159,Aygo,a,2
+RT-687,Aygo,a,1
+ZC-215,Passat,b,1
+OS-395,Golf,a,2
+HM-990,Corolla,b,1
+NC-795,Golf,a,1
+SB-033,Range Rover,c,1
+NS-695,Legacy,b,1
+TH-081,Corolla,b,1
+FE-093,Sorento,c,2
+TI-841,Passat,b,3
+ML-075,Land Cruiser,c,2
+AG-325,Sorento,c,1
+TQ-694,Aygo,a,1
+RW-068,Passat,b,2
+IH-284,Sorento,c,3
+NS-826,Corolla,b,2
+GO-193,Aygo,a,1
+NU-013,Legacy,b,1
+DF-185,Golf,a,1
+AK-299,Sorento,c,1
+DN-297,Golf,a,3
+OP-889,Yaris,a,3
+WA-052,Legacy,b,3
+HP-066,Legacy,b,1
+NF-951,Sorento,c,2
+TX-506,Golf,a,1
+YA-281,Sorento,c,1
+XJ-758,Land Cruiser,c,3
+GM-438,Golf,a,2
+ZL-155,Sorento,c,3
+VS-575,Aygo,a,2
+JI-975,Passat,b,2
+UC-504,Corolla,b,2
+RX-692,Legacy,b,3
+TU-704,Yaris,a,2
+ZI-694,Land Cruiser,c,2
+MG-441,Sorento,c,2
+ML-148,Yaris,a,3
+IM-148,Golf,a,1
+QD-829,Corolla,b,2
+OP-683,Land Cruiser,c,2
+GK-265,Land Cruiser,c,2
+AV-527,Land Cruiser,c,2
+US-332,Corolla,b,3
+LB-502,Passat,b,3
+QI-894,Legacy,b,1
+CK-935,Land Cruiser,c,1
+FQ-942,Range Rover,c,2
+NT-813,Land Cruiser,c,3
+KN-520,Sorento,c,1
+IR-796,Golf,a,3
+EL-856,Range Rover,c,2
+RT-268,Range Rover,c,1
+KX-942,Golf,a,3
+HW-261,Range Rover,c,1
+YV-383,Land Cruiser,c,1
+SC-649,Golf,a,3
+ST-148,Corolla,b,3
+LK-292,Corolla,b,1
+IP-872,Passat,b,2
+ET-726,Golf,a,2
+GU-444,Corolla,b,2
+TD-697,Corolla,b,2
+ND-983,Sorento,c,1
+WX-520,Sorento,c,2
+BZ-934,Corolla,b,3
+EV-563,Sorento,c,2
+OF-520,Sorento,c,2
+CT-812,Aygo,a,1
+DY-007,Passat,b,1
+ZY-905,Yaris,a,2
+ZG-049,Sorento,c,2
+PM-095,Range Rover,c,3
+DM-905,Range Rover,c,3
+ZM-128,Corolla,b,1
+NN-629,Passat,b,1
+SG-909,Yaris,a,1
+XM-768,Sorento,c,3
+DR-396,Range Rover,c,1
+JM-259,Aygo,a,2
+FT-583,Legacy,b,3
+QT-231,Legacy,b,3
+XG-839,Sorento,c,3
+NG-850,Corolla,b,1
+UQ-010,Range Rover,c,1
+JC-433,Passat,b,3
+UK-636,Legacy,b,2
+UH-415,Sorento,c,1
+RM-469,Passat,b,2
+ZV-991,Yaris,a,3
+DF-758,Corolla,b,1
+XD-392,Land Cruiser,c,3
+WU-052,Yaris,a,3
+UJ-759,Legacy,b,3
+WL-338,Range Rover,c,3
+MO-717,Yaris,a,3
+WR-128,Aygo,a,1
+PY-564,Sorento,c,3
+FL-734,Golf,a,3
+MM-852,Corolla,b,1
+WR-830,Aygo,a,3
+EA-693,Corolla,b,1
+RH-883,Corolla,b,1
+UV-868,Legacy,b,1
+PN-595,Land Cruiser,c,3
+BM-135,Corolla,b,1
+MF-119,Sorento,c,1
+XZ-042,Legacy,b,1
+RX-021,Legacy,b,2
+JR-937,Corolla,b,1
+ED-002,Corolla,b,2
+GM-513,Corolla,b,2
+GK-259,Legacy,b,1
+QS-568,Golf,a,2
+TN-463,Land Cruiser,c,2
+KR-312,Yaris,a,2
+FY-625,Range Rover,c,2
+SN-391,Passat,b,3
+KO-988,Sorento,c,2
+SL-135,Range Rover,c,1
+MD-772,Sorento,c,3
+HX-035,Aygo,a,2
+CA-387,Aygo,a,1
+EI-319,Legacy,b,1
+BT-330,Golf,a,2
+EC-700,Passat,b,2
+UD-880,Corolla,b,3
+RW-625,Aygo,a,1
+KO-586,Aygo,a,3
+PZ-594,Corolla,b,1
+KL-868,Corolla,b,2
+NT-205,Yaris,a,2
+EP-095,Legacy,b,2
+FD-627,Golf,a,2
+GE-840,Corolla,b,3
+QF-664,Corolla,b,1
+GQ-723,Land Cruiser,c,1
+WW-729,Yaris,a,2
+DA-735,Golf,a,1
+JG-548,Yaris,a,2
+FB-029,Aygo,a,2
+VJ-533,Legacy,b,2
+CM-231,Passat,b,3
+TK-831,Aygo,a,1
+MS-015,Golf,a,2
+CC-110,Land Cruiser,c,3
+UY-332,Yaris,a,2
+QP-184,Corolla,b,2
+GP-151,Passat,b,3
+UG-849,Yaris,a,2
+GW-386,Legacy,b,1
+SD-224,Land Cruiser,c,3
+AK-125,Aygo,a,1
+RB-437,Aygo,a,3
+YY-938,Land Cruiser,c,2
+DP-482,Range Rover,c,2
+YG-172,Sorento,c,1
+UC-762,Golf,a,1
+ZF-223,Sorento,c,2
+CP-763,Aygo,a,1
+NE-437,Legacy,b,2
+CM-668,Range Rover,c,2
+GZ-393,Land Cruiser,c,1
+MD-892,Range Rover,c,2
+JZ-671,Legacy,b,2
+DU-102,Legacy,b,1
+DF-026,Sorento,c,3
+TG-092,Corolla,b,1
+AS-894,Yaris,a,2
+CI-643,Land Cruiser,c,1
+IG-942,Yaris,a,3
+UP-772,Passat,b,2
+RB-273,Aygo,a,2
+UR-219,Sorento,c,1
+FA-778,Land Cruiser,c,2
+XG-725,Sorento,c,3
+WN-878,Yaris,a,3
+HL-584,Land Cruiser,c,2
+RV-424,Sorento,c,3
+TK-183,Passat,b,1
+TP-595,Aygo,a,1
+KT-836,Aygo,a,2
+PW-667,Passat,b,2
+VQ-841,Golf,a,2
+TO-224,Corolla,b,2
+TG-367,Aygo,a,2
+DO-795,Land Cruiser,c,2
+NN-039,Land Cruiser,c,1
+QY-954,Corolla,b,1
+UH-365,Yaris,a,3
+EL-523,Corolla,b,1
+UF-839,Range Rover,c,2
+NM-542,Range Rover,c,1
+ZL-188,Sorento,c,2
+BV-079,Range Rover,c,3
+TY-877,Corolla,b,2
+SJ-213,Aygo,a,2
+DZ-698,Passat,b,1
+XF-714,Sorento,c,3
+GB-639,Corolla,b,2
+BF-659,Corolla,b,1
+GP-976,Aygo,a,2
+JW-946,Corolla,b,2
+OM-145,Sorento,c,3
+PO-587,Range Rover,c,3
+JV-383,Sorento,c,3
+LG-706,Land Cruiser,c,2
+YG-313,Legacy,b,2
+FK-219,Passat,b,2
+CS-788,Aygo,a,1
+JW-540,Golf,a,3
+HA-539,Golf,a,1
+SQ-540,Sorento,c,1
+SG-762,Passat,b,1
+BN-683,Golf,a,1
+FI-499,Range Rover,c,3
+XX-504,Passat,b,3
+TJ-974,Yaris,a,2
+UU-004,Sorento,c,3
+ZC-412,Corolla,b,3
+AR-364,Passat,b,3
+OP-253,Golf,a,3
+XP-044,Passat,b,3
+XU-660,Legacy,b,1
+ZZ-548,Land Cruiser,c,1
+SR-834,Yaris,a,1
+JV-887,Land Cruiser,c,1
+OT-199,Aygo,a,2
+NX-393,Sorento,c,1
+PO-468,Legacy,b,2
+LP-368,Yaris,a,3
+FZ-264,Land Cruiser,c,3
+SF-829,Land Cruiser,c,3
+OW-846,Sorento,c,2
+IT-575,Legacy,b,1
+QA-772,Range Rover,c,3
+GQ-738,Land Cruiser,c,1
+PJ-928,Land Cruiser,c,3
+FG-317,Range Rover,c,2
+BM-856,Sorento,c,1
+FI-826,Sorento,c,3
+GM-702,Legacy,b,1
+GO-919,Legacy,b,3
+WR-869,Legacy,b,2
+UY-273,Sorento,c,3
+MN-189,Passat,b,3
+HG-038,Sorento,c,3
+EE-961,Aygo,a,3
+VQ-078,Land Cruiser,c,3
+DL-397,Legacy,b,3
+MH-400,Land Cruiser,c,3
+JL-033,Legacy,b,2
+KJ-355,Golf,a,2
+FE-172,Range Rover,c,2
+ME-821,Yaris,a,1
+DX-783,Aygo,a,1
+CX-260,Range Rover,c,1
+CY-610,Aygo,a,1
+LI-804,Range Rover,c,2
+VZ-344,Passat,b,1
+GZ-397,Sorento,c,1
+EK-729,Legacy,b,2
+VM-376,Aygo,a,2
+QA-076,Legacy,b,2
+MK-364,Yaris,a,3
+AL-533,Aygo,a,3
+WB-100,Legacy,b,2
+DD-637,Yaris,a,2
+PN-766,Corolla,b,2
+WE-674,Corolla,b,1
+IN-444,Aygo,a,3
+FA-324,Aygo,a,2
+EX-813,Golf,a,2
+XS-421,Sorento,c,3
+XQ-538,Passat,b,3
+SR-875,Range Rover,c,1
+GW-794,Land Cruiser,c,2
+EZ-833,Range Rover,c,3
+IW-555,Range Rover,c,3
+IQ-529,Aygo,a,3
+VA-913,Corolla,b,1
+CA-948,Range Rover,c,2
+YZ-088,Corolla,b,2
+BT-717,Passat,b,2
+MC-133,Corolla,b,2
+ZW-581,Land Cruiser,c,2
+MO-940,Yaris,a,1
+IT-924,Passat,b,1
+PW-259,Range Rover,c,1
+RD-266,Range Rover,c,3
+LV-888,Aygo,a,3
+EQ-259,Corolla,b,3
+QW-080,Yaris,a,1
+WO-281,Legacy,b,3
+TP-849,Range Rover,c,3
+JL-470,Golf,a,3
+HS-555,Aygo,a,2
+KD-270,Sorento,c,1
+BU-313,Sorento,c,2
+UF-411,Aygo,a,1
+WQ-891,Aygo,a,3
+MU-677,Land Cruiser,c,2
+AL-482,Range Rover,c,2
+II-371,Passat,b,2
+HU-006,Range Rover,c,3
+BA-762,Yaris,a,1
+LS-230,Land Cruiser,c,3
+FZ-452,Aygo,a,1
+JO-268,Land Cruiser,c,3
+KV-321,Legacy,b,1
+TI-859,Corolla,b,1
+WN-003,Legacy,b,3
+JD-584,Land Cruiser,c,1
+XM-399,Range Rover,c,3
+EL-205,Corolla,b,2
+BM-153,Golf,a,2
+JP-000,Aygo,a,2
+VX-361,Range Rover,c,1
+DY-666,Legacy,b,2
+VK-727,Passat,b,3
+QI-334,Yaris,a,1
+VI-658,Passat,b,1
+NV-995,Aygo,a,2
+PN-663,Golf,a,2
+UW-240,Legacy,b,2
+BY-749,Yaris,a,1
+JW-249,Yaris,a,1
+BK-361,Corolla,b,3
+OS-303,Corolla,b,3
+DY-433,Land Cruiser,c,1
+SL-847,Legacy,b,3
+QY-523,Sorento,c,2
+EC-845,Sorento,c,3
+UD-110,Corolla,b,2
+AH-788,Passat,b,2
+ZE-137,Range Rover,c,1
+DG-028,Golf,a,3
+YI-246,Passat,b,3
+GY-735,Legacy,b,2
+VR-432,Yaris,a,1
+UN-247,Yaris,a,2
+KG-549,Land Cruiser,c,2
+WQ-039,Land Cruiser,c,1
+PD-837,Golf,a,3
+KJ-968,Land Cruiser,c,3
+SW-522,Range Rover,c,2
+HV-743,Yaris,a,2
+MG-505,Passat,b,3
+SF-542,Range Rover,c,2
+AN-820,Passat,b,2
+HV-869,Sorento,c,3
+UR-237,Golf,a,3
+EZ-938,Aygo,a,2
+SS-223,Land Cruiser,c,1
+CZ-827,Corolla,b,3
+YB-084,Legacy,b,2
+NV-039,Land Cruiser,c,1
+UL-513,Corolla,b,2
+AX-483,Range Rover,c,3
+SY-521,Corolla,b,2
+YT-156,Corolla,b,1
+GV-787,Legacy,b,3
+WN-781,Corolla,b,2
+XR-675,Land Cruiser,c,2
+OX-024,Aygo,a,3
+GI-635,Land Cruiser,c,2
+FM-971,Passat,b,1
+DO-613,Sorento,c,3
+PN-911,Land Cruiser,c,3
+RJ-605,Legacy,b,3
+SY-417,Corolla,b,3
+IS-103,Legacy,b,3
+DM-847,Sorento,c,3
+SC-950,Legacy,b,3
+DE-734,Yaris,a,2
+MF-227,Yaris,a,1
+IF-790,Corolla,b,2
+XA-388,Aygo,a,1
+ZR-966,Sorento,c,2
+UI-063,Golf,a,2
+FF-540,Aygo,a,2
+QI-513,Legacy,b,2
+DD-956,Aygo,a,1
+UV-652,Corolla,b,3
+DH-318,Yaris,a,2
+JH-877,Passat,b,3
+UD-415,Legacy,b,3
+BV-137,Aygo,a,3
+EW-499,Golf,a,2
+YC-815,Legacy,b,2
+IA-485,Land Cruiser,c,3
+TL-282,Aygo,a,2
+BV-958,Corolla,b,2
+RZ-687,Corolla,b,3
+QR-067,Sorento,c,2
+LP-241,Golf,a,3
+QB-462,Yaris,a,2
+KA-078,Aygo,a,1
+VS-281,Range Rover,c,1
+GY-663,Land Cruiser,c,1
+ZN-084,Yaris,a,2
+NL-466,Yaris,a,1
+UF-058,Passat,b,3
+GX-040,Passat,b,1
+QS-895,Passat,b,2
+KA-336,Passat,b,1
+ZC-715,Legacy,b,2
+PG-186,Yaris,a,3
+WG-917,Corolla,b,1
+ZC-652,Sorento,c,3
+RE-021,Sorento,c,1
+HD-286,Golf,a,3
+KG-625,Yaris,a,3
+IB-964,Land Cruiser,c,3
+AR-313,Corolla,b,3
+ZY-552,Golf,a,3
+LQ-669,Aygo,a,3
+RD-435,Range Rover,c,2
+HW-400,Aygo,a,3
+SN-364,Sorento,c,3
+FS-934,Corolla,b,2
+WJ-782,Passat,b,3
+HY-227,Aygo,a,3
+ZN-186,Passat,b,1
+HB-003,Passat,b,1
+QD-745,Aygo,a,1
+AL-855,Corolla,b,3
+HR-531,Corolla,b,2
+IX-550,Sorento,c,1
+VX-105,Legacy,b,2
+LY-127,Golf,a,3
+TZ-297,Range Rover,c,2
+ZR-598,Yaris,a,2
+KU-170,Range Rover,c,1
+BD-928,Sorento,c,2
+KG-461,Range Rover,c,2
+YN-114,Passat,b,2
+PJ-807,Corolla,b,3
+WR-982,Sorento,c,3
+UN-032,Land Cruiser,c,3
+JA-266,Legacy,b,1
+LT-552,Corolla,b,1
+HA-941,Land Cruiser,c,2
+LI-154,Legacy,b,1
+MJ-896,Aygo,a,1
+VH-101,Yaris,a,3
+BV-207,Range Rover,c,3
+BV-492,Legacy,b,3
+AV-546,Golf,a,2
+BK-628,Yaris,a,1
+HE-417,Land Cruiser,c,2
+XQ-244,Range Rover,c,2
+DF-671,Corolla,b,1
+CC-342,Land Cruiser,c,1
+CO-417,Sorento,c,3
+CG-506,Aygo,a,3
+UD-687,Land Cruiser,c,2
+VD-468,Aygo,a,1
+TB-902,Legacy,b,2
+AI-438,Corolla,b,2
+CI-439,Range Rover,c,1
+RD-169,Land Cruiser,c,3
+QT-157,Sorento,c,1
+SZ-610,Land Cruiser,c,1
+QK-776,Corolla,b,3
+VD-551,Yaris,a,3
+YB-161,Corolla,b,3
+WN-300,Range Rover,c,1
+KK-672,Legacy,b,2
+RQ-866,Yaris,a,2
+IS-905,Sorento,c,3
+UN-717,Sorento,c,3
+BK-367,Range Rover,c,2
+DU-472,Range Rover,c,3
+CB-263,Legacy,b,1
+YK-449,Land Cruiser,c,3
+XT-975,Corolla,b,3
+UF-889,Legacy,b,2
+LN-453,Passat,b,2
+IA-627,Corolla,b,2
+PD-629,Land Cruiser,c,2
+ZA-905,Legacy,b,3
+FS-373,Aygo,a,2
+HH-165,Passat,b,1
+LU-997,Golf,a,2
+IB-929,Range Rover,c,1
+YW-081,Land Cruiser,c,1
+YU-275,Corolla,b,2
+RZ-182,Passat,b,3
+EG-717,Corolla,b,2
+EY-254,Corolla,b,3
+JJ-991,Yaris,a,3
+BC-548,Sorento,c,1
+TV-925,Range Rover,c,2
+BI-708,Sorento,c,2
+UO-872,Yaris,a,3
+PP-721,Aygo,a,2
+IN-495,Aygo,a,2
+ZR-584,Corolla,b,2
+TK-038,Corolla,b,2
+NP-177,Legacy,b,2
+OX-004,Range Rover,c,2
+VX-102,Yaris,a,2
+UV-890,Land Cruiser,c,3
+PO-184,Yaris,a,2
+BH-674,Aygo,a,2
+NE-530,Aygo,a,3
+WK-337,Golf,a,1
+QZ-141,Aygo,a,1
+AF-876,Sorento,c,1
+BI-727,Legacy,b,1
+TU-187,Sorento,c,1
+KM-546,Yaris,a,3
+QV-666,Yaris,a,1
+LV-020,Range Rover,c,2
+GE-454,Legacy,b,1
+PY-275,Passat,b,2
+JV-234,Yaris,a,1
+FQ-814,Sorento,c,1
+TV-847,Land Cruiser,c,3
+VB-011,Sorento,c,1
+ZC-628,Passat,b,1
+VJ-940,Sorento,c,2
+YW-479,Aygo,a,2
+RW-855,Sorento,c,3
+TI-277,Range Rover,c,1
+PU-694,Passat,b,3
+CF-984,Range Rover,c,3
+YN-827,Range Rover,c,1
+DR-197,Legacy,b,1
+XE-524,Sorento,c,2
+RO-242,Range Rover,c,3
+TI-814,Corolla,b,3
+IF-014,Land Cruiser,c,3
+WT-726,Range Rover,c,3
+HM-031,Range Rover,c,3
+FQ-837,Corolla,b,1
+BS-216,Yaris,a,3
+GD-267,Passat,b,1
+WG-172,Corolla,b,2
+CL-087,Yaris,a,1
+YG-237,Corolla,b,1
+CE-605,Corolla,b,1
+PZ-393,Passat,b,2
+KJ-047,Golf,a,1
+HC-277,Range Rover,c,3
+IC-409,Legacy,b,2
+GW-085,Passat,b,1
+XE-116,Range Rover,c,2
+KN-012,Sorento,c,3
+CH-750,Aygo,a,2
+MN-995,Range Rover,c,1
+PU-082,Passat,b,1
+MM-173,Aygo,a,1
+MJ-769,Passat,b,2
+AA-983,Golf,a,3
+VX-726,Corolla,b,1
+AV-802,Legacy,b,2
+WZ-348,Aygo,a,3
+KE-435,Aygo,a,3
+NV-870,Range Rover,c,2
+XL-489,Passat,b,2
+XX-573,Passat,b,3
+LX-020,Golf,a,3
+ZR-075,Corolla,b,2
+QC-534,Aygo,a,1
+LH-605,Legacy,b,3
+VR-155,Legacy,b,3
+DI-411,Yaris,a,1
+OI-411,Yaris,a,1
+HC-690,Legacy,b,2
+DB-841,Golf,a,1
+CP-920,Yaris,a,1
+YS-758,Legacy,b,1
+GU-692,Legacy,b,1
+LK-934,Corolla,b,1
+QN-479,Golf,a,1
+VY-110,Legacy,b,3
+PF-521,Sorento,c,3
+ND-019,Yaris,a,2
+YV-948,Range Rover,c,2
+AO-230,Golf,a,3
+DN-940,Golf,a,1
+WQ-852,Range Rover,c,3
+JV-627,Range Rover,c,2
+RN-061,Legacy,b,2
+RB-294,Range Rover,c,3
+HH-837,Legacy,b,3
+CZ-374,Sorento,c,2
+DP-811,Passat,b,1
+UC-593,Yaris,a,2
+MZ-114,Sorento,c,1
+QI-212,Golf,a,1
+VK-533,Range Rover,c,3
+AS-555,Range Rover,c,3
+LA-048,Corolla,b,3
+ZE-994,Golf,a,3
+DY-529,Passat,b,1
+IA-102,Land Cruiser,c,1
+YX-944,Corolla,b,3
+ST-552,Corolla,b,2
+RJ-600,Yaris,a,2
+KY-404,Land Cruiser,c,2
+XP-912,Range Rover,c,3
+CK-091,Yaris,a,2
+AN-829,Land Cruiser,c,3
+ID-980,Corolla,b,1
+NH-627,Passat,b,3
+CE-580,Yaris,a,2
+HB-182,Range Rover,c,3
+AV-266,Sorento,c,1
+YQ-396,Passat,b,1
+CE-269,Corolla,b,1
+QJ-726,Corolla,b,1
+OW-024,Range Rover,c,3
+OY-176,Sorento,c,2
+TA-012,Sorento,c,2
+PG-303,Yaris,a,2
+YD-934,Land Cruiser,c,2
+WQ-541,Aygo,a,1
+KL-492,Yaris,a,2
+IA-732,Land Cruiser,c,1
+CY-180,Passat,b,2
+FC-825,Range Rover,c,2
+JS-409,Legacy,b,1
+FU-117,Land Cruiser,c,2
+AK-246,Legacy,b,3
+EF-901,Golf,a,3
+TF-098,Yaris,a,1
+GQ-330,Aygo,a,3
+NZ-716,Sorento,c,1
+EI-534,Corolla,b,2
+LU-827,Sorento,c,2
+EZ-077,Land Cruiser,c,1
+SR-976,Golf,a,3
+RB-915,Sorento,c,3
+ME-131,Passat,b,1
+EK-677,Passat,b,1
+SQ-435,Passat,b,2
+ZA-600,Legacy,b,3
+XA-050,Legacy,b,2
+LQ-917,Legacy,b,2
+PW-671,Yaris,a,3
+WQ-880,Legacy,b,1
+SF-875,Passat,b,1
+VT-114,Sorento,c,2
+JC-867,Legacy,b,2
+DY-400,Golf,a,2
+MH-819,Legacy,b,3
+NS-733,Yaris,a,3
+MI-882,Sorento,c,2
+IR-512,Sorento,c,1
+BF-280,Yaris,a,2
+PS-544,Sorento,c,1
+VZ-883,Aygo,a,2
+RE-279,Golf,a,3
+PQ-933,Legacy,b,3
+OB-333,Land Cruiser,c,3
+JZ-901,Legacy,b,2
+EE-312,Golf,a,2
+XK-706,Land Cruiser,c,2
+NG-840,Golf,a,3
+GG-411,Passat,b,2
+UD-939,Sorento,c,1
+WF-440,Corolla,b,2
+JI-330,Land Cruiser,c,1
+ZD-676,Corolla,b,2
+UM-513,Land Cruiser,c,3
+KH-192,Aygo,a,1
+KJ-833,Range Rover,c,2
+IK-545,Corolla,b,1
+KE-495,Sorento,c,3
+RB-887,Golf,a,2
+MD-317,Land Cruiser,c,3
+BW-069,Passat,b,1
+UZ-557,Sorento,c,1
+MJ-280,Yaris,a,3
+BM-940,Land Cruiser,c,3
+DC-955,Legacy,b,2
+AK-414,Golf,a,3
+EB-478,Passat,b,1
+AM-692,Sorento,c,1
+HJ-891,Yaris,a,3
+QI-781,Range Rover,c,1
+NS-985,Sorento,c,3
+BT-637,Range Rover,c,2
+SX-304,Aygo,a,1
+JJ-810,Corolla,b,1
+JB-713,Legacy,b,3
+NH-717,Yaris,a,3
+ZH-522,Aygo,a,1
+KC-867,Range Rover,c,2
+PF-003,Aygo,a,3
+MT-169,Sorento,c,2
+LA-686,Golf,a,1
+LA-270,Corolla,b,2
+LO-278,Aygo,a,3
+EC-772,Sorento,c,2
+OM-599,Land Cruiser,c,1
+RB-411,Aygo,a,2
+YS-491,Golf,a,3
+ZI-953,Land Cruiser,c,2
+NI-445,Golf,a,2
+FX-298,Aygo,a,1
+JD-965,Range Rover,c,1
+HV-403,Legacy,b,3
+OY-393,Aygo,a,2
+OG-624,Corolla,b,2
+ZQ-488,Yaris,a,1
+IE-971,Legacy,b,3
+HS-402,Passat,b,3
+SP-450,Range Rover,c,2
+BV-971,Legacy,b,3
+RZ-650,Yaris,a,1
+YN-726,Range Rover,c,1
+PN-944,Land Cruiser,c,2
+OX-307,Yaris,a,2
+VO-958,Land Cruiser,c,1
+SX-002,Passat,b,1
+ST-817,Golf,a,2
+PX-364,Aygo,a,3
+QV-060,Corolla,b,1
+CJ-866,Corolla,b,2
+GC-612,Land Cruiser,c,2
+DW-206,Sorento,c,2
+KQ-990,Yaris,a,1
+RS-365,Land Cruiser,c,2
+EX-400,Yaris,a,3
+HX-135,Range Rover,c,2
+JD-807,Land Cruiser,c,3
+HS-188,Legacy,b,1
+UG-821,Passat,b,2
+RS-840,Yaris,a,3
+RD-883,Legacy,b,2
+ID-270,Yaris,a,2
+XX-497,Sorento,c,3
+DN-678,Yaris,a,3
+AB-017,Legacy,b,2
+HW-982,Sorento,c,2
+IR-689,Golf,a,3
+GS-809,Land Cruiser,c,1
+VJ-811,Passat,b,1
+CH-610,Passat,b,1
+UJ-448,Range Rover,c,1
+DU-380,Legacy,b,1
+TH-308,Yaris,a,2
+JA-119,Passat,b,2
+JH-254,Range Rover,c,2
+NY-394,Yaris,a,3
+AV-395,Corolla,b,3
+UY-254,Golf,a,1
+IK-002,Land Cruiser,c,2
+UQ-465,Yaris,a,3
+ES-324,Land Cruiser,c,3
+HH-702,Legacy,b,2
