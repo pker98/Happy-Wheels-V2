@@ -1,24 +1,44 @@
 from UI.Print_rent_menu import Print_rent_menu
 from Services.Rent_service import Rent_service
+from Utilizations.Rent_validation import Rent_validation
+from UI.Print_error import Print_error
 
 class Rent_controller(object):
     def __init__(self):
-        # Menus
+        # UI's
         self.__rent_menu = Print_rent_menu()
-        # Service
-        self.__Rent_service = Rent_service()    # Notar input (1-3), finnur staðsetningu, skilar location 
+        self.error = Print_error()
+        # Services
+        self.__Rent_service = Rent_service()    # Notar input (1-3), finnur staðsetningu, skilar location
+        # Validations
+        self.__Rent_valid = Rent_validation() 
+
 
     def Rent_page(self):
-        # Open location menu - Returns location
-        self.__location = self.__rent_menu.Page_1()
-        # Open date option menu - Returns pick up- and drop off dates
-        self.__date_list = self.__rent_menu.Page_2()
-        # Open size option menu - Returns size of car
-        self.__vehicle_size = self.__rent_menu.Page_3()
+        Page = 0   # If user inputs correctly he will go on next page
+        while Page < 3:
+            if Page == 0:
+                # Open location menu - Returns location - Checks if correct input
+                self.location = self.__rent_menu.Page_1()
+                if self.__Rent_valid.Check_location(self.location):
+                    Page += 1
+                else:
+                    self.error.Wrong_location()
+            elif Page == 1:
+                # Open date option menu - Returns pick up- and drop off dates - Checks if correct input
+                self.date_list = self.__rent_menu.Page_2()
+                if self.__Rent_valid.Check_date(self.date_list):
+                    Page += 1
+                else:
+                    self.error.Wrong_date()
+            elif Page == 2:
+                # Open size option menu - Returns size of car
+                self.vehicle_size = self.__rent_menu.Page_3()
+                Page += 1
 
-        # Returns available cars with information from user
-        available_car_list = self.__Rent_service.find_available_cars(self.__date_list, \
-        self.__vehicle_size, self.__location)
+        # Returns available cars using information from the user
+        self.__Rent_service.find_available_cars(self.date_list, \
+        self.vehicle_size, self.location)
         # Returns and constructs a string, takes available_car_list and makes it a string.
         available_car_string = self.__Rent_service.make_carlist_string()
 

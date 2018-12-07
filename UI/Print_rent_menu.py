@@ -21,9 +21,9 @@ class Print_rent_menu(object):
         os.system('cls||clear')
         print("\t~ Date and time ~")
         print("\tPage 2 of 8\n") 
-        pick_up_date = input("Enter pick up date(mm/dd/yyyy): ")
+        pick_up_date = input("Enter pick up date(mmddyyyy): ")
         # Pick_up_time = input("Enter pick up time(hh): ")
-        drop_off_date = input("Enter drop off date(mm/dd/yyyy): ")
+        drop_off_date = input("Enter drop off date(mmddyyyy): ")
         # Drop_off_time = input("Enter drop off time(hh): ")
 
         return [pick_up_date, drop_off_date]
@@ -63,7 +63,7 @@ class Print_rent_menu(object):
         os.system('cls||clear')
         print(car_info+"\n")
         print(date_info+"\n")
-        print("~~Aditional features~~")
+        print("~~Additional features~~")
         print(features)
 
         print("Final price: {}".format(price))

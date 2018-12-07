@@ -26,7 +26,6 @@ class Rent_service(object):
                         break
                     else:
                         break
-        return self.available_car_list
 
     def get_car_size_string(self, choice):
         """Converts choice of size (a,b,c) to a string which represents the size name (Small, Medium, SUVs)"""
