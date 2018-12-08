@@ -36,14 +36,14 @@ class Print_rent_menu(object):
         print("B. Medium cars (from X kr. to Y kr.")    # sem eru cheapest og most expensive bílar
         print("C. SUV (from X kr. to Y kr.")
 
-        self.choice = input("Choose your vehicle size: ")
+        self.choice = input("Choose your vehicle size: ").lower()
         return self.choice
     
     def Page_4(self, available_car_string, size_string):
         os.system('cls||clear')
-        print(size_string)
-        print(available_car_string)
-        selected_car = input("Choose your desired car: ")
+        print(size_string)  # Kallar á samansettan streng
+        print(available_car_string) # Kallar á samansettan streng
+        selected_car = input("Choose your desired car: ").lower()
 
         return selected_car
         
