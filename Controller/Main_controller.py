@@ -11,8 +11,10 @@ class Main_controller(object):
         self.__salesman_controller = Salesman_controller()
 
     def Main_page(self):
-        self.__choice = self.__main_menu.main_page()
-        if self.__choice == "1":
-            self.__rent_controller.Rent_page()
-        elif self.__choice == "2":
-            self.__salesman_controller.sign_in_page()
+        choice = ""
+        while choice != "x":
+            choice = self.__main_menu.main_page()
+            if choice == "1":
+                self.__rent_controller.Rent_page()
+            elif choice == "2":
+                self.__salesman_controller.sign_in_page()

@@ -2,6 +2,7 @@ from Respository.Cars_repo import Cars_repo
 from Models.Car import Car
 from UI.Print_rent_menu import Print_rent_menu
 from UI.Print_error import Print_error
+from Utilizations.Rent_validation import Rent_validation
 import os
 
 class Rent_service(object):
@@ -11,6 +12,8 @@ class Rent_service(object):
         self.error = Print_error()
         # Repo's
         self.car_class = Cars_repo()
+        # Validations
+        self.__Rent_valid = Rent_validation()
         
        
     def find_available_cars(self, date, size, location):
@@ -81,35 +84,29 @@ class Rent_service(object):
             if feature == self.user_input:
                 return index
 
-    def add_features(self):
+    def add_features(self, choice):
         """Adds features to list, returns list"""
         self.user_input = ""
         self.feature_list = []
-        while self.user_input != "n":
-            
-            self.user_input = input().lower()
 
-            # Get string from the user_input which we then use when printing added! or removed! statements.
-            feature_string = self.get_feature_string()
+        # Get string from the user_input which we then use when printing added! or removed! statements.
+        feature_string = self.get_feature_string()
 
-            # Get index of the user_input to find it in the list, returns the index and then we
-            # use the index to remove the feature from the list
-            index = self.get_index()
-           
-            if self.user_input in ("a","b","c") and self.user_input not in self.feature_list:
-                print("{} added!".format(feature_string))
-                self.feature_list.append(self.user_input)
-            elif self.user_input in self.feature_list:
-                print("{} removed!".format(feature_string))
-                self.feature_list.pop(index)
-            else:
-                # If input not valid, print error message
-                self.error.Wrong_feature_choice()   # Clears window and prints error message
-                self.__rent_menu.Page_6()   # Prints out menu again because screen to cleared
+        # Get index of the user_input to find it in the list, returns the index and then we
+        # use the index to remove the feature from the list
+        index = self.get_index()
+        
+        if choice not in self.feature_list:   # If valid feature and not already in feature_list
+            print("{} added!".format(feature_string))
+            self.feature_list.append(choice)
+        elif choice in self.feature_list:  # If already in feature_list it is removed from it
+            print("{} removed!".format(feature_string))
+            self.feature_list.pop(index)
+        elif choice == "n":    # Stops when user inputs "n" and returns feature_list
+            pass
 
-            print("Press n to continue to check out!")
-        return self.feature_list
-
+        
+        
     def get_price(self, feature_list):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
         price, insurance = self.desired_car.get_pri_ins()

@@ -1,9 +1,10 @@
-from Controller.Main_controller import Main_controller
+# from Controller.Main_controller import Main_controller
 import datetime
 
 class Rent_validation():
     def __init__(self):
-        self.__main_controller = Main_controller()
+        # self.__main_controller = Main_controller()
+        pass
 
     def Check_if_nav(self, user_input, page):
         """ Checks if user input is p for previous, h for home or x for exit
@@ -11,14 +12,15 @@ class Rent_validation():
         if user_input == "p":   # Goes to previous page
             page -= 1
         elif user_input == "m": # Goes back to start of program (Main_controller)
-            self.__main_controller.Main_page()
+            # self.__main_controller.Main_page()
+            pass
         elif user_input == "x": # Exits 
             exit()
         return page
 
     def Check_location(self, location, page):
         """ Checks if user input is a valid location """
-        self.__check_nav = Rent_validation()    # Makes instance of Rent_validation class to call Check_if_nav 
+        self.__check_nav = Rent_validation()    # Makes instance of Rent_validation class to call Check_if_nav, used in all Check functions
         page = self.__check_nav.Check_if_nav(location, page)    # Checks if user input is equal to p, m or X (navigation)
         if location in ("1", "2", "3"):
             return True, page
@@ -60,4 +62,17 @@ class Rent_validation():
             return True, page
         else:
             return False, page
-        
+
+    def Check_confirmation(self, choice, page):
+        page = self.__check_nav.Check_if_nav(choice, page)  # Checks if user input is equal to p, m or X (navigation)    
+        if choice == "c":
+            return True, page
+        else:
+            return False, page
+
+    def Check_feature(self, feature, page):
+        page = self.__check_nav.Check_if_nav(feature, page)  # Checks if user input is equal to p, m or X (navigation)
+        if feature in ("a", "b", "c"):
+            return True, page
+        else:
+            return False, page
