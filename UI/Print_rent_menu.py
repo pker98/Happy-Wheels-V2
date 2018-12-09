@@ -50,7 +50,7 @@ class Print_rent_menu(object):
     def Page_5(self, car_info):
         os.system('cls||clear')
         print(car_info)
-        input("Press enter to confirm.")
+        input("Press enter to confirm ")
         
     def Page_6(self):
         os.system('cls||clear')

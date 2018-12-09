@@ -22,7 +22,7 @@ class Cars_repo:
             for line in csv_reader:
                 plate_num, brand, size, location = line
                 new_car = Car(plate_num, brand, size, location)
-                key = new_car.get_plate_number() #key er platenumber
+                key = new_car.get_plate_number() # key er platenumber
             
                 self.car_dict[key] = new_car
 

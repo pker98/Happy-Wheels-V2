@@ -33,4 +33,10 @@ class Rent_validation():
             return True
         else:
             return False
+
+    def Check_car_choice(self, car_choice):
+        if car_choice in ("1", "2", "3", "4", "5"):
+            return True
+        else:
+            return False
         

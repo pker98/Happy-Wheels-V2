@@ -1,10 +1,12 @@
 from Respository.Cars_repo import Cars_repo
 from Models.Car import Car
+from Utilizations.Rent_validation import Rent_validation
 import os
 
 class Rent_service(object):
     def __init__(self):
         self.car_class = Cars_repo()
+        self.__Rent_valid = Rent_validation()
        
 
     def find_available_cars(self, date, size, location):
@@ -81,6 +83,7 @@ class Rent_service(object):
         self.user_input = ""
         self.feature_list = []
         while self.user_input != "n":
+
             self.user_input = input().lower()
 
             # Get string from the user_input which we then use when printing added! or removed! statements.
@@ -96,6 +99,8 @@ class Rent_service(object):
             elif self.user_input in self.feature_list:
                 print("{} removed!".format(feature_string))
                 self.feature_list.pop(index)
+            else:
+                pass
 
             print("Press n to continue to check out!")
         return self.feature_list

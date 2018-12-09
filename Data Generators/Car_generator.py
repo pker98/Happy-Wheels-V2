@@ -56,22 +56,16 @@ def print_menu():
     return input("Choose your option: ")
 
 def main():
-    valid_input = True
     choice = ""
     while choice != "x":
         choice = print_menu()
-        if valid_input:
-            valid_input = False
-        else: 
-            print("Invalid input.")
-            valid_input = True
         if choice == "1":
             number = int(input("Number of cars to generate: "))
             for i in tqdm(range(number)):
                 new_car = generate_car()
                 add_new_car(new_car)
             print("Installation complete")
-            input("Press enter to continue")
+            input("Press enter to continue ")
         elif choice == "2":
             choice = input("Are you sure you want to delete all cars from file? (y/n) ")
             if choice == "y":
@@ -81,8 +75,6 @@ def main():
                 except(PermissionError):
                     print("Close file to make changes")
                     input("Press enter to continue ")
-        else:
-            valid_input = False
             
 
 main()

@@ -39,21 +39,28 @@ class Rent_controller(object):
                 else:
                     self.error.Wrong_vehicle_size()
 
-        # Returns available cars using information from the user
+        # Finds available cars using information from the user
         self.__Rent_service.find_available_cars(self.date_list, \
         self.vehicle_size, self.location)
-        # Constructs a string, takes available_car_list and returns a string.
+        # Returns available cars as a string.
         available_car_string = self.__Rent_service.make_carlist_string()
-
-        # Opens available cars menu - Returns chosen car - Checks if correct input
+        # Gets right name of size category, i.e. 1 = small cars, 2 = medium cars, 3 = SUV
         self.size_string = self.__Rent_service.get_car_size_string(self.vehicle_size)
-        self.car_choice = self.__rent_menu.Page_4(available_car_string, self.size_string)
+        
+        # Opens available cars menu - Returns chosen car - Checks if correct input
+        car_choice_bool = False 
+        while not car_choice_bool:
+            self.car_choice = self.__rent_menu.Page_4(available_car_string, self.size_string)
+            if self.__Rent_valid.Check_car_choice(self.car_choice):
+                car_choice_bool = True
+            else:
+                self.error.Wrong_car_choice()
         
         # Use the self.car_choice to find the desired car in the car list and makes a desired car obj
         # This definition does not return anything, it makes a self.obj used in the desired_car_info
         car_obj = self.__Rent_service.get_desired_car(self.car_choice)
         
-        # All info on car printed out to the user, user needs to press enter to confirm car.
+        # Opens up confirmation menu - Enter to continue
         self.car_info = self.__Rent_service.desired_car_info()
         self.__rent_menu.Page_5(self.car_info)
 
