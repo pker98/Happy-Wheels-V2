@@ -1,6 +1,9 @@
 import os
 
 class Print_rent_menu(object):
+    def __init__(self):
+        self.header = "Press 'p' for Previous page\tPress 'h' for Home\tPress 'x' to Exit"
+
     def Page_1(self):
         """ Prints out the menu where the customer chooses 
         location to pick up his desired car """
@@ -11,8 +14,8 @@ class Print_rent_menu(object):
         print("1. Reykjavík")
         print("2. Keflavík")
         print("3. Akureyri")
-
         choice = input("Choose an option: ").lower()
+
         return choice
 
     def Page_2(self):
@@ -22,9 +25,7 @@ class Print_rent_menu(object):
         print("\t~ Date and time ~")
         print("\tPage 2 of 8\n") 
         pick_up_date = input("Enter pick up date(mmddyyyy): ")
-        # Pick_up_time = input("Enter pick up time(hh): ")
         drop_off_date = input("Enter drop off date(mmddyyyy): ")
-        # Drop_off_time = input("Enter drop off time(hh): ")
 
         return [pick_up_date, drop_off_date]
 
@@ -35,8 +36,8 @@ class Print_rent_menu(object):
         print("A. Small cars (from X kr. to Y kr.") # Hér er hægt að vera búinn að vera með breytu
         print("B. Medium cars (from X kr. to Y kr.")    # sem eru cheapest og most expensive bílar
         print("C. SUV (from X kr. to Y kr.")
-
         self.choice = input("Choose your vehicle size: ").lower()
+
         return self.choice
     
     def Page_4(self, available_car_string, size_string):
@@ -44,7 +45,7 @@ class Print_rent_menu(object):
         print(size_string)  # Kallar á samansettan streng
         print(available_car_string) # Kallar á samansettan streng
         selected_car = input("Choose your desired car: ").lower()
-
+        
         return selected_car
         
     def Page_5(self, car_info):
@@ -65,7 +66,6 @@ class Print_rent_menu(object):
         print(date_info+"\n")
         print("~~Additional features~~")
         print(features)
-
         print("Final price: {}".format(price))
 
         

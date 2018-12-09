@@ -1,17 +1,21 @@
 from Respository.Cars_repo import Cars_repo
 from Models.Car import Car
-from Utilizations.Rent_validation import Rent_validation
+from UI.Print_rent_menu import Print_rent_menu
+from UI.Print_error import Print_error
 import os
 
 class Rent_service(object):
     def __init__(self):
+        # UI's
+        self.__rent_menu = Print_rent_menu()
+        self.error = Print_error()
+        # Repo's
         self.car_class = Cars_repo()
-        self.__Rent_valid = Rent_validation()
+        
        
-
     def find_available_cars(self, date, size, location):
         """Get car_dict from repo and get inputs from Rent controller. 
-        Compare to get available car."""
+        Compare to get available cars."""
         self.available_car_list = []
         self.dict = self.car_class.get_cars()
         for value in self.dict.values():
@@ -50,7 +54,6 @@ class Rent_service(object):
         """Uses self.user_input to index car in the car_list, makes the car object, self.desired_car"""
         num_choice = int(car_choice)
         self.desired_car = self.available_car_list[num_choice-1]
-        return self.desired_car
 
     def desired_car_info(self):
         "Takes the desired car object and return all of its attributes in a string"
@@ -83,7 +86,7 @@ class Rent_service(object):
         self.user_input = ""
         self.feature_list = []
         while self.user_input != "n":
-
+            
             self.user_input = input().lower()
 
             # Get string from the user_input which we then use when printing added! or removed! statements.
@@ -100,14 +103,16 @@ class Rent_service(object):
                 print("{} removed!".format(feature_string))
                 self.feature_list.pop(index)
             else:
-                pass
+                # If input not valid, print error message
+                self.error.Wrong_feature_choice()   # Clears window and prints error message
+                self.__rent_menu.Page_6()   # Prints out menu again because screen to cleared
 
             print("Press n to continue to check out!")
         return self.feature_list
 
-    def get_price(self, feature_list, car_obj):
+    def get_price(self, feature_list):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
-        price, insurance = car_obj.get_pri_ins()
+        price, insurance = self.desired_car.get_pri_ins()
         final_price = int(price) + int(insurance)
         for feature in feature_list:
             if feature == "a":

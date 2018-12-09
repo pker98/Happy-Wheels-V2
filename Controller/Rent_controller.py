@@ -9,72 +9,86 @@ class Rent_controller(object):
         self.__rent_menu = Print_rent_menu()
         self.error = Print_error()
         # Services
-        self.__Rent_service = Rent_service()    # Notar input (1-3), finnur staðsetningu, skilar location
+        self.__Rent_service = Rent_service()   
         # Validations
         self.__Rent_valid = Rent_validation() 
 
-
     def Rent_page(self):
         Page = 0   # If user inputs correctly he will go on next page
-        while Page < 3: # Stops running when user has 
+        # While loop used so the user can navigate back and forth in the system
+        while Page < 7: # Stops running when user has completed the rental process
             if Page == 0:
                 # Open location menu - Returns location - Checks if correct input
                 self.location = self.__rent_menu.Page_1()
-                if self.__Rent_valid.Check_location(self.location):
+                Valid, Page = self.__Rent_valid.Check_location(self.location, Page)
+                if Valid:
                     Page += 1
+                elif Page == 1:
+                    # Goes to main menu
+                    pass
                 else:
                     self.error.Wrong_location()
             elif Page == 1:
                 # Open date option menu - Returns pick up- and drop off dates - Checks if correct input
                 self.date_list = self.__rent_menu.Page_2()
-                if self.__Rent_valid.Check_date(self.date_list):
+                Valid, Page = self.__Rent_valid.Check_date(self.date_list, Page)
+                if Valid:
                     Page += 1
+                elif Page == 0:
+                    pass    # Moves to previous page
                 else:
                     self.error.Wrong_date()
             elif Page == 2:
                 # Open size option menu - Returns size of car - Checks if correct input
                 self.vehicle_size = self.__rent_menu.Page_3()
-                if self.__Rent_valid.Check_vehicle_size(self.vehicle_size):
+                Valid, Page = self.__Rent_valid.Check_vehicle_size(self.vehicle_size, Page)
+                if Valid:
                     Page += 1
+                elif Page == 1:
+                    pass    # Moves to previous page
                 else:
                     self.error.Wrong_vehicle_size()
+            elif Page == 3:
+                # Finds available cars using information from the user
+                self.__Rent_service.find_available_cars(self.date_list, \
+                self.vehicle_size, self.location)
+                # Returns available cars as a string.
+                available_car_string = self.__Rent_service.make_carlist_string()
+                # Gets right name of size category, i.e. 1 = small cars, 2 = medium cars, 3 = SUV
+                self.size_string = self.__Rent_service.get_car_size_string(self.vehicle_size)
 
-        # Finds available cars using information from the user
-        self.__Rent_service.find_available_cars(self.date_list, \
-        self.vehicle_size, self.location)
-        # Returns available cars as a string.
-        available_car_string = self.__Rent_service.make_carlist_string()
-        # Gets right name of size category, i.e. 1 = small cars, 2 = medium cars, 3 = SUV
-        self.size_string = self.__Rent_service.get_car_size_string(self.vehicle_size)
-        
-        # Opens available cars menu - Returns chosen car - Checks if correct input
-        car_choice_bool = False 
-        while not car_choice_bool:
-            self.car_choice = self.__rent_menu.Page_4(available_car_string, self.size_string)
-            if self.__Rent_valid.Check_car_choice(self.car_choice):
-                car_choice_bool = True
-            else:
-                self.error.Wrong_car_choice()
-        
-        # Use the self.car_choice to find the desired car in the car list and makes a desired car obj
-        # This definition does not return anything, it makes a self.obj used in the desired_car_info
-        car_obj = self.__Rent_service.get_desired_car(self.car_choice)
-        
-        # Opens up confirmation menu - Enter to continue
-        self.car_info = self.__Rent_service.desired_car_info()
-        self.__rent_menu.Page_5(self.car_info)
+                # Opens available cars menu - Returns chosen car - Checks if correct input
+                self.car_choice = self.__rent_menu.Page_4(available_car_string, self.size_string)
+                Valid, Page = self.__Rent_valid.Check_car_choice(self.car_choice, Page)
+                if Valid:
+                    Page += 1
+                elif Page == 2:
+                    pass    # Moves to previous page
+                else:
+                    self.error.Wrong_car_choice()    
+            elif Page == 4:
+                # Use the self.car_choice to find the desired car in the car list and makes a car object in service
+                # This definition does not return anything, it makes a self.obj used in the desired_car_info in Rent_service
+                self.__Rent_service.get_desired_car(self.car_choice)
+                
+                # Opens up confirmation menu - Enter to continue - No validation needed
+                self.car_info = self.__Rent_service.desired_car_info()  # Returns car from the user's inputs
+                self.__rent_menu.Page_5(self.car_info)
+                Page += 1
+            elif Page == 5:
+                # Date info string, takes the self.date_list and turns it into a string.
+                self.date_info = self.__Rent_service.make_date_str(self.date_list)
 
-        # Date info string, takes the self.__date_list and turns it into a string.
-        self.date_info = self.__Rent_service.make_date_str(self.date_list)
-
-        # Additional features page
-        self.__rent_menu.Page_6()
-        feature_list = self.__Rent_service.add_features()
-        feature_string = self.__Rent_service.make_feature_string()
-
-        # Check out
-        price = self.__Rent_service.get_price(feature_list, car_obj)
-        self.__rent_menu.Page_7(self.car_info, price, self.date_info, feature_string)
+                # Additional features page
+                # Validation check in service
+                self.__rent_menu.Page_6()
+                feature_list = self.__Rent_service.add_features()
+                feature_string = self.__Rent_service.make_feature_string()  ### Bæta við navigation ###
+                Page += 1
+            elif Page == 6:
+                # Check out
+                price = self.__Rent_service.get_price(feature_list)
+                self.__rent_menu.Page_7(self.car_info, price, self.date_info, feature_string)
         
 
 
