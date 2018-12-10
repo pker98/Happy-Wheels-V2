@@ -6,6 +6,7 @@ from Models.Order import Order
 from Models.Customer import Customer
 from Utilizations.Rent_validation import Rent_validation
 from UI.Print_error import Print_error
+from Respository.Log_repo import Log_repo
 import datetime, os
 
 class Rent_service(object):
@@ -18,6 +19,9 @@ class Rent_service(object):
         self.customer_repo = Customer_repo()
         # Validations
         self.__Rent_valid = Rent_validation()
+        self.log_repo = Log_repo()
+        # List
+        self.feature_list = []
 
     def change_str_to_date(self, num_list):
         """ Takes in a list with pick up and drop off string and returns a list with pick up and drop off dates."""
@@ -102,9 +106,7 @@ class Rent_service(object):
 
     def add_features(self, choice):
         """Adds features to list, returns list"""
-        self.user_input = ""
-        self.feature_list = []
-
+        self.user_input = choice
         # Get string from the user_input which we then use when printing added! or removed! statements.
         feature_string = self.get_feature_string(choice)
 
@@ -120,6 +122,8 @@ class Rent_service(object):
             print("{} removed!".format(feature_string))
             self.feature_list.pop(index)
             input("Press enter to continue")
+            
+        return self.feature_list
 
     def get_price(self, feature_list, car_obj):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
@@ -160,13 +164,16 @@ class Rent_service(object):
         new_pick_up, drop_off = date_list
         new_order = Order(booking_num, new_pick_up, drop_off, plate_num, email)
         order_dict = self.order_repo.get_orders()
-        for key, values in order_dict.items():
-            if key == plate_num:
-                values.append(new_order)
-                break
-            else:
-                order_dict[plate_num] = [new_order]
-                break
+        if order_dict != {}:
+            for key, values in order_dict.items():
+                if key == plate_num:
+                    values.append(new_order)
+                    break
+                else:
+                    order_dict[plate_num] = [new_order]
+                    break
+        else:
+            order_dict[plate_num] = [new_order]
         
         self.order_repo.update_order_file(order_dict)
     
@@ -175,6 +182,10 @@ class Rent_service(object):
         customer_dict = self.customer_repo.get_customers()
         customer_dict[email] = new_customer
         self.customer_repo.add_customers(customer_dict)
+
+    def update_log(self, first_name, last_name, car_obj, date_list):
+        update_repo = self.log_repo
+        update_repo.Update_repo("{} {} booked {}, {}. Pick up date: {}, Drop off date {}".format(first_name, last_name, car_obj.get_brand(), car_obj.get_plate_number(), date_list[0], date_list[1]))
 
 
 

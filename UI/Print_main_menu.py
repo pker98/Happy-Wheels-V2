@@ -15,6 +15,7 @@ class Print_main_menu(object):
         print("\t\t\t\t          ,-----,     ")
         print("\t\t\t\t        ,--'---:---`--,")
         print("\t\t\t\t ~ ~ ~ ==(o)-----(o)==J")
+        
         print("\t\t\t\tMain menu")
         print("")
         print("1. Continue as a Customer")

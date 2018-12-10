@@ -4,6 +4,8 @@ from Models.Salesman import Salesman
 from Respository.Customer_repo import Customer_repo
 from Models.Customer import Customer
 from Respository.Log_repo import Log_repo 
+from Respository.Orders_repo import Orders_repo
+import datetime
 
 class Salesman_service(object):
     def __init__(self):
@@ -12,31 +14,62 @@ class Salesman_service(object):
         self.salesman_info = Salesman_repo()
         self.customer_info = Customer_repo()
         self.log_repo = Log_repo()
+        self.get_orders_dict = Orders_repo()
     
     def get_cars(self, choice):
         self.cars_dict = self.cars_info.get_cars()
         
         if choice == "1":
-            return self.cars_dict
+            return self.cars_dict.values()
+
         elif choice == "2":
-            for car_info in self.cars_dict.values():
-            # If car_info.get_status == available(True?) þá append hann í available listann
-                pass 
+            self.available_car_list = []
+            car_dict = self.cars_info.get_cars()
+            today = datetime.date.today()
+            for value in car_dict.values():
+                old_orders = value.get_orders()
+                if old_orders != []:
+                    for order in old_orders:
+                        old_pick_up, old_drop_off = order
+                        if (old_pick_up <= today <= old_drop_off): 
+                            valid = False
+                        else:
+                            valid = True
+
+                    if valid == True:
+                        self.available_car_list.append(value)
+                else:
+                    self.available_car_list.append(value)                          
+            return self.available_car_list
+
         elif choice == "3":
-            # If car_info.get_status == unavailable(False?) þá append hann í unavailable listann  
-            pass
+            self.unavailable_car_list = []
+            car_dict = self.cars_info.get_cars()
+            today = datetime.date.today()
+            for value in car_dict.values():
+                old_orders = value.get_orders()
+                if old_orders != []:
+                    for order in old_orders:
+                        old_pick_up, old_drop_off = order
+                        if (old_pick_up <= today <= old_drop_off): 
+                            valid = True
+                        else:
+                            valid = False
+
+                    if valid == True:
+                        self.unavailable_car_list.append(value)
+                                          
+            return self.unavailable_car_list
+            
 
     def get_customer(self, email):
         #nær í customer keys úr dict 
-        self.customer_dict = self.customer_info.get_customer()
+        self.customer_dict = self.customer_info.get_customers()
         #ef keyið passar input frá notanda, returna value úr þeim key
         for key, value in self.customer_dict.items():
             if key == email:
-                return [value.get_name(), value.get_phone(), value.get_creditcard()]
+                return "Name: {}\tPhone: {}".format(value.get_first_name(), value.get_phone())
 
-
-    def make_cust_value_string(self, value_list):
-        return "Name: {}\tPhone: {}\tCreditcard: {}".format(value_list[0], value_list[1], value_list[2])
 
     def salesman_ID_pw(self,ID, pw):
         valid = False
@@ -59,6 +92,18 @@ class Salesman_service(object):
         update_repo = self.log_repo
         update_repo.Update_repo("{} changed his password. ID: {}".format(salesman_object.get_name(), salesman_object.get_ID()))
 
+    def get_order_info(self, booking_num):
+        order_list = []
+        order_dict = self.get_orders_dict.get_orders()
+        for values in order_dict.values():
+            for order in values:
+                if booking_num == order.get_order_num():
+                    order_list.append(order)
+        
+        return order_list
+
+    def get_log(self):
+        return self.log_repo.Read_repo()
 
 
         

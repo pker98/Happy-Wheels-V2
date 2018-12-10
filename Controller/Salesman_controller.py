@@ -33,26 +33,32 @@ class Salesman_controller(object):
             self.__rent_car.Rent_page()
         # Search for order
         elif self.__option == "2":
-            #self.__get_info.get_orders()
-            pass
+            booking_num = self.__salesman.find_order_page()
+            order_list = self.__get_info.get_order_info(booking_num)
+            for i in range(len(order_list)):
+                self.__salesman.print_orders(i+1, order_list[i])
+            input("")
         # Get customer information
         elif self.__option == "3":
             self.email = self.__salesman.customer_info_menu()
-            cust_val_list = self.__get_info.get_customer(self.email)
-            cust_val_string = self.__get_info.make_cust_value_string(cust_val_list)
+            cust_val_string = self.__get_info.get_customer(self.email)
             self.__salesman.customer_list(cust_val_string)
             input("")
         # Get cars information
         elif self.__option == "4":
             self.__info_choice = self.__salesman.cars_info_menu()
             self.cars = self.__get_info.get_cars(self.__info_choice)
-            for key,value in self.cars.items():
-                self.__salesman.car_lists(key,value)
+            for car in self.cars:
+                plate_number = car.get_plate_number()
+                brand = car.get_brand()
+                location = car.get_location_string()
+                self.__salesman.car_lists(plate_number, brand, location)
+            input("")
         elif self.__option == "5":
-            pass
+            log = self.__get_info.get_log()
+            self.__salesman.print_log(log)
+            input("")
         elif self.__option == "6":
             new_pw = self.__salesman.get_new_pw()
             self.__get_info.change_pw(new_pw)
             input("")
-        elif self.__option == "7":
-            pass

@@ -1,9 +1,10 @@
+from Respository.Orders_repo import Orders_repo
+from Models.Order import Order
 class Car(object):
-    def __init__(self, plate_number, brand, car_size, location, order_list =[], price=0, insurance=0, loc_str=""):
+    def __init__(self, plate_number, brand, car_size, location, price=0, insurance=0, loc_str=""):
         self.car_size = car_size
         self.plate_number = plate_number
         self.brand = brand
-        self.order_list = order_list
         self.location = location
         self.price = price
         self.insurance = insurance
@@ -38,8 +39,23 @@ class Car(object):
         return self.price, self.insurance
 
     def get_orders(self):
-        self.order_list = [[10102018,10162018],[10202018,10222018]]
-        return self.order_list
+        """Returns list of orders, example list = [[10102018,10122018],[12122018,12142018]], one list represents one order"""
+        order_dict = Orders_repo()
+        order_list = []
+        valid = False
+        for key, values in order_dict.get_orders().items():
+            if key == self.plate_number: #check if number plate matches a key in the dict
+                for order in values:
+                    pick_up_date = order.get_pick_up_date()
+                    drop_off_date = order.get_drop_off_date()
+                    date = [pick_up_date, drop_off_date]
+                    order_list.append(date)
+                    valid = True     
+        if valid == True:
+            return order_list
+        else:
+            return []
+
     
     def get_location(self):
         return self.location

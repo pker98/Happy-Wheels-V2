@@ -19,8 +19,8 @@ class Print_salesman_menu(object):
         os.system("cls||clear")
         print("\t~Salesman menu~")
         print("1. Rent a car\t\t5. Operation LOG")
-        print("2. Search for order\t6.Change password")
-        print("3. Customer information\t7.Shortcuts instruction")
+        print("2. Search for order\t6. Change password")
+        print("3. Customer information")
         print("4. Cars information")
 
         choice = input("Choose an option: ")
@@ -53,10 +53,23 @@ class Print_salesman_menu(object):
         print("\t\tCustomer info")
         print(value_list)
 
-    def car_lists(self, plate, info):
-        print("{}: {}".format(plate,info))
+    def car_lists(self, plate, brand, location):
+        print("Plate number: {}\tBrand: {}\tLocation: {}".format(plate,brand,location))
 
     def get_new_pw(self):
         new_pw = input("Enter new password: ")
         return new_pw
+
+    def find_order_page(self):
+        os.system("cls||clear")
+        print("\t~Find order~\n")
+        booking_num = input("Enter the booking number for the order: ")
+        return booking_num
+    
+    def print_orders(self, num, order):
+        print("\t~Find order~\n")
+        print("{}. {}".format(num, order))
+
+    def print_log(self, log):
+        print("\n"+log)
 
