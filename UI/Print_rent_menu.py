@@ -1,4 +1,5 @@
 import os
+from Models.Customer import Customer
 
 class Print_rent_menu(object):
     def __init__(self):
@@ -36,9 +37,9 @@ class Print_rent_menu(object):
         print(self.header)
         print("\t~ Pick a car ~")
         print("\tPage 3 of 8\n")
-        print("A. Small cars (from X kr. to Y kr.") # Hér er hægt að vera búinn að vera með breytu
-        print("B. Medium cars (from X kr. to Y kr.")    # sem eru cheapest og most expensive bílar
-        print("C. SUV (from X kr. to Y kr.")
+        print("A. Small cars") # Hér er hægt að vera búinn að vera með breytu
+        print("B. Medium cars")    # sem eru cheapest og most expensive bílar
+        print("C. SUV")
         choice = input("Choose your vehicle size: ").lower()
 
         return choice
@@ -79,8 +80,63 @@ class Print_rent_menu(object):
         print("~~Additional features~~")
         print(features)
         print("Final price: {}".format(price))
+        input("Press enter to book now!")
 
-        
+    def Page_8(self):
+        os.system('cls||clear')
+        first_name = input("First name: ")
+        last_name = input("Last_name: ")
+        date_of_birth = input("Date of birth: ")
+        email = input("Email:")
+        country = input("Country: ")
+        address = input("Address: ")
+        zip_code = input("Zip code: ")
+        phone = input("Phone number: ")
+        driver = input("Extra driver: ")
+        input("Press enter to confirm.")
+        return first_name, last_name, date_of_birth, email, country, address, zip_code, phone, driver
+    
+    def Page_9(self):
+        os.system('cls||clear')
+        print("1. Pay now with credit card.\n2. Pay now with debit card.\n3. Pay when I pick up.")
+        choice = input("Choose payment method: ")
+        return choice
+    
+    def Page_10(self):
+        os.system('cls||clear')
+        print("~~Card info~~")
+        card_num = input("Input card number: ")
+        security_code = input("Input security code: ")
+        exp_date = input("Enter expiration date(mmyy):")
+        input("Press enter to confirm.")
+        return card_num, security_code, exp_date
+
+    def Page_11(self):
+        os.system('cls||clear')
+        print("~~Insurance~~")
+        print("Enter your creditcard information for insurance")
+        card_num = input("Input card number: ")
+        security_code = input("Input security code: ")
+        exp_date = input("Enter expiration date(mmyy):")
+        print("If you do not show up or forget to cancel order, the company will charge you full price.")
+        input("Press enter to confirm.")
+        return card_num, security_code, exp_date
+    
+    def Page_12(self, New_customer, car_info, date_info, feature_string):
+        os.system('cls||clear')
+        print("~~Check-out~~")
+        print(New_customer)
+        print(car_info)
+        print(date_info)
+        print(feature_string)
+        input("Press enter to confirm.")
+
+    def Page_13(self, booking_num):
+        os.system('cls||clear')
+        print("Thanks for using our service and hope to see you soon!")
+        print("Your booking number is: {}".format(booking_num))
+        print("The receipt will be sent to your email, along with the booking number.")
+        input("Press enter to go to main menu.")
 
 
         

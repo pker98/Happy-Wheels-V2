@@ -2,6 +2,8 @@ from UI.Print_rent_menu import Print_rent_menu
 from Services.Rent_service import Rent_service
 from Utilizations.Rent_validation import Rent_validation
 from UI.Print_error import Print_error
+from Models.Customer import Customer
+import datetime
 
 class Rent_controller(object):
     def __init__(self):
@@ -31,7 +33,7 @@ class Rent_controller(object):
                     self.error.Wrong_location() # Prints error message
             elif Page == 1:
                 # Open date option menu - Returns pick up- and drop off dates - Checks if correct input
-                self.date_list = self.__rent_menu.Page_2()
+                self.__date_str_list = self.__rent_menu.Page_2()
                 Valid, Page = self.__Rent_valid.Check_date(self.date_list, Page)
                 if Valid:
                     Page += 1
@@ -40,6 +42,9 @@ class Rent_controller(object):
                 else:
                     self.error.Wrong_date() # Prints error message
             elif Page == 2:
+                # Change the input from the user to date format, input was a string.
+                self.date_list = self.__Rent_service.change_str_to_date(self.__date_str_list)
+                
                 # Open size option menu - Returns size of car - Checks if correct input
                 self.vehicle_size = self.__rent_menu.Page_3()
                 Valid, Page = self.__Rent_valid.Check_vehicle_size(self.vehicle_size, Page)
@@ -51,10 +56,10 @@ class Rent_controller(object):
                     self.error.Wrong_vehicle_size() # Prints error message
             elif Page == 3:
                 # Finds available cars using information from the user
-                self.__Rent_service.find_available_cars(self.date_list, \
+                available_car_list = self.__Rent_service.find_available_cars(self.date_list, \
                 self.vehicle_size, self.location)
                 # Returns available cars as a string.
-                available_car_string = self.__Rent_service.make_carlist_string()
+                available_car_string = self.__Rent_service.make_carlist_string(available_car_list)
                 # Gets right name of size category, i.e. 1 = small cars, 2 = medium cars, 3 = SUV
                 self.size_string = self.__Rent_service.get_car_size_string(self.vehicle_size)
 
@@ -88,22 +93,23 @@ class Rent_controller(object):
                 self.date_info = self.__Rent_service.make_date_str(self.date_list)
 
                 # Opens up additional features page - Returns chosen car - Checks if correct input
-                while Valid:
+                while 4 < Page < 6:
                     choice = self.__rent_menu.Page_6()
                     Valid, Page = self.__Rent_valid.Check_feature(choice, Page)
-                    self.__Rent_service.add_features(choice)
-                if Valid:
-                    Page += 1
-                elif Page == 4:
-                    pass    # Moves to previous page
-                else:
-                    self.error.Wrong_feature_choice()   # Prints error message
-                    
-            # elif Page == 6:
-                # # Check out
-                # feature_string = self.__Rent_service.make_feature_string()
-                # price = self.__Rent_service.get_price(feature_list)
-                # self.__rent_menu.Page_7(self.car_info, price, self.date_info, feature_string)
+                    if Valid and choice != "n":
+                        self.__Rent_service.add_features(choice)
+                        # Makes string of the features added
+                        feature_string = self.__Rent_service.make_feature_string(choice)
+                    elif Valid and choice == "n":
+                        Page += 1
+                        break
+                    elif not Valid and choice not in ("x", "p", "m"):
+                        self.error.Wrong_feature_choice()   # Prints error message
+                
+            elif Page == 6:
+                # Check out
+                price = self.__Rent_service.get_price()
+                self.__rent_menu.Page_7(self.car_info, price, self.date_info, feature_string)
         
 
 

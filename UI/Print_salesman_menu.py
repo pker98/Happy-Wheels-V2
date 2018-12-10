@@ -1,8 +1,6 @@
 import os
 
 class Print_salesman_menu(object):
-    def __init__(self):
-        pass
     
     def ID_menu(self):
         os.system("cls||clear")
@@ -40,6 +38,25 @@ class Print_salesman_menu(object):
         choice = input("Choose an option: ")
         return choice
     
+    def customer_info_menu(self):
+        os.system("cls||clear")
+        print("\t~Customer information~")
+        cust_email = input("Enter customer email: ")
+        self.email = cust_email
+        return cust_email
+
+
+    def customer_list(self, value_list):
+        os.system("cls||clear")
+        print('\t\t{}'.format(self.email))
+        print("-"*60)
+        print("\t\tCustomer info")
+        print(value_list)
+
     def car_lists(self, plate, info):
         print("{}: {}".format(plate,info))
+
+    def get_new_pw(self):
+        new_pw = input("Enter new password: ")
+        return new_pw
 

@@ -8,8 +8,8 @@ class Salesman_controller(object):
         self.__salesman = Print_salesman_menu() 
         self.__rent_car = Rent_controller()
         self.__get_info = Salesman_service()
+        self.Salesman_service = Salesman_service()
         self.__main_page = Print_main_menu()
-        # self.__get_customer_info = Customer_service() - Andri
 
     def sign_in_page(self):
         """Gets employee's ID and password and checks if it's valid"""
@@ -24,7 +24,7 @@ class Salesman_controller(object):
             if valid == False:
                 try_again = input("\nID or password is invalid. Try again? (y/n): ").lower()
                 if try_again != "y":
-                    self.__main_page.main_page()
+                    break
 
         # Prints Salesman menu
         self.__option = self.__salesman.salesman_main_page()
@@ -33,11 +33,15 @@ class Salesman_controller(object):
             self.__rent_car.Rent_page()
         # Search for order
         elif self.__option == "2":
+            #self.__get_info.get_orders()
             pass
         # Get customer information
         elif self.__option == "3":
-            # Andra kóði kemur hér
-            pass
+            self.email = self.__salesman.customer_info_menu()
+            cust_val_list = self.__get_info.get_customer(self.email)
+            cust_val_string = self.__get_info.make_cust_value_string(cust_val_list)
+            self.__salesman.customer_list(cust_val_string)
+            input("")
         # Get cars information
         elif self.__option == "4":
             self.__info_choice = self.__salesman.cars_info_menu()
@@ -47,6 +51,8 @@ class Salesman_controller(object):
         elif self.__option == "5":
             pass
         elif self.__option == "6":
-            pass
+            new_pw = self.__salesman.get_new_pw()
+            self.__get_info.change_pw(new_pw)
+            input("")
         elif self.__option == "7":
             pass

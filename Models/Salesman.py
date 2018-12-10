@@ -23,3 +23,7 @@ class Salesman(object):
     
     def get_password(self):
         return self.password
+
+    def change_pw(self, new_pw):
+        self.password = new_pw
+        return self.password

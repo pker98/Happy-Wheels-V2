@@ -1,40 +1,55 @@
 from Respository.Cars_repo import Cars_repo
+from Respository.Orders_repo import Orders_repo
+from Respository.Customer_repo import Customer_repo
 from Models.Car import Car
-from UI.Print_rent_menu import Print_rent_menu
-from UI.Print_error import Print_error
+from Models.Order import Order
+from Models.Customer import Customer
 from Utilizations.Rent_validation import Rent_validation
-import os
+from UI.Print_error import Print_error
+import datetime, os
 
 class Rent_service(object):
     def __init__(self):
         # UI's
-        self.__rent_menu = Print_rent_menu()
         self.error = Print_error()
         # Repo's
         self.car_class = Cars_repo()
+        self.order_repo = Orders_repo()
+        self.customer_repo = Customer_repo()
         # Validations
         self.__Rent_valid = Rent_validation()
-        
+
+    def change_str_to_date(self, num_list):
+        """ Takes in a list with pick up and drop off string and returns a list with pick up and drop off dates."""
+        pick_up_num, drop_off_num = num_list
+        pick_up_date = datetime.date(int(pick_up_num[4:8]), int(pick_up_num[:2]), int(pick_up_num[2:4]))
+        drop_off_date = datetime.date(int(drop_off_num[4:8]), int(drop_off_num[:2]), int(drop_off_num[2:4]))
+
+        return [pick_up_date, drop_off_date] 
        
     def find_available_cars(self, date, size, location):
         """Get car_dict from repo and get inputs from Rent controller. 
-        Compare to get available cars."""
+        Compare to get available car."""
         self.available_car_list = []
-        self.dict = self.car_class.get_cars()
-        for value in self.dict.values():
+        car_dict = self.car_class.get_cars()
+        for value in car_dict.values():
             if location == value.get_location() and size == value.get_car_size():
-                pick_up, drop_off = date
-                pick_up = int(pick_up)
-                drop_off = int(drop_off)
+                new_pick_up_date, new_drop_off_date = date
                 old_orders = value.get_orders()
-                for order in old_orders:
-                    old_pick_up, old_drop_off = order
-                    if (old_drop_off < pick_up and old_drop_off < drop_off) or \
-                    (old_pick_up > pick_up and old_pick_up > drop_off): 
+                if old_orders != []:
+                    for order in old_orders:
+                        old_pick_up, old_drop_off = order
+                        if (old_drop_off < new_pick_up_date and old_drop_off < new_drop_off_date) or \
+                        (old_pick_up > new_pick_up_date and old_pick_up > new_drop_off_date): 
+                            valid = True
+                        else:
+                            valid = False
+                            break
+                    if valid == True:
                         self.available_car_list.append(value)
-                        break
-                    else:
-                        break
+                else:
+                    self.available_car_list.append(value)                          
+        return self.available_car_list
 
     def get_car_size_string(self, choice):
         """Converts choice of size (a,b,c) to a string which represents the size name (Small, Medium, SUVs)"""
@@ -46,10 +61,10 @@ class Rent_service(object):
             string = "SUVs"
         return string
 
-    def make_carlist_string(self):
+    def make_carlist_string(self, available_car_list):
         """Constructs a string made from the car_list to print out for the user"""
         carlist_string = ""
-        for index, car in enumerate(self.available_car_list):
+        for index, car in enumerate(available_car_list):
             carlist_string += ("Car {}: {}\n".format(index+1, car.get_brand()))
         return carlist_string
 
@@ -57,6 +72,7 @@ class Rent_service(object):
         """Uses self.user_input to index car in the car_list, makes the car object, self.desired_car"""
         num_choice = int(car_choice)
         self.desired_car = self.available_car_list[num_choice-1]
+        return self.desired_car
 
     def desired_car_info(self):
         "Takes the desired car object and return all of its attributes in a string"
@@ -69,13 +85,13 @@ class Rent_service(object):
         string += "Base price: {}\nInsurance: {}".format(price, insurance)
         return string
 
-    def get_feature_string(self):
+    def get_feature_string(self, choice):
         """Converts user_input (a,b,c) to string (GPS, Extra Driver, Extra Insurance)"""
-        if self.user_input == "a":
+        if choice == "a":
             return "GPS"
-        elif self.user_input == "b":
+        elif choice == "b":
             return "Extra Driver"
-        elif self.user_input == "c":
+        elif choice == "c":
             return "Extra Insurance"
     
     def get_index(self):
@@ -90,7 +106,7 @@ class Rent_service(object):
         self.feature_list = []
 
         # Get string from the user_input which we then use when printing added! or removed! statements.
-        feature_string = self.get_feature_string()
+        feature_string = self.get_feature_string(choice)
 
         # Get index of the user_input to find it in the list, returns the index and then we
         # use the index to remove the feature from the list
@@ -99,17 +115,15 @@ class Rent_service(object):
         if choice not in self.feature_list:   # If valid feature and not already in feature_list
             print("{} added!".format(feature_string))
             self.feature_list.append(choice)
+            input("Press enter to continue")
         elif choice in self.feature_list:  # If already in feature_list it is removed from it
             print("{} removed!".format(feature_string))
             self.feature_list.pop(index)
-        elif choice == "n":    # Stops when user inputs "n" and returns feature_list
-            pass
+            input("Press enter to continue")
 
-        
-        
-    def get_price(self, feature_list):
+    def get_price(self, feature_list, car_obj):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
-        price, insurance = self.desired_car.get_pri_ins()
+        price, insurance = car_obj.get_pri_ins()
         final_price = int(price) + int(insurance)
         for feature in feature_list:
             if feature == "a":
@@ -126,13 +140,41 @@ class Rent_service(object):
         date_info = "Pickup date: {}\nDrop off date: {}".format(pick_up, drop_off)
         return date_info
     
-    def make_feature_string(self):
+    def make_feature_string(self, choice):
         feature_string = ""
-        for self.user_input in self.feature_list:
-            feature_string += "{}\n".format(self.get_feature_string())
+        for choice in self.feature_list:
+            feature_string += "{}\n".format(self.get_feature_string(choice))
         if feature_string == "":
             return "None\n"
         return feature_string
+
+    def make_booking_num(self):
+        """Makes booking number from order dictionary"""
+        counter = 1
+        for key, values in self.order_repo.get_orders().items(): 
+            for order in values:
+                counter += 1
+        return str(counter)
+
+    def add_order_to_dict(self, booking_num, email, plate_num, date_list):
+        new_pick_up, drop_off = date_list
+        new_order = Order(booking_num, new_pick_up, drop_off, plate_num, email)
+        order_dict = self.order_repo.get_orders()
+        for key, values in order_dict.items():
+            if key == plate_num:
+                values.append(new_order)
+                break
+            else:
+                order_dict[plate_num] = [new_order]
+                break
+        
+        self.order_repo.update_order_file(order_dict)
+    
+    def update_customer_repo(self, new_customer):
+        email = new_customer.get_email()
+        customer_dict = self.customer_repo.get_customers()
+        customer_dict[email] = new_customer
+        self.customer_repo.add_customers(customer_dict)
 
 
 
