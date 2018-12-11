@@ -70,9 +70,16 @@ class Rent_validation():
         else:
             return False, page
 
-    def Check_feature(self, feature, page):
-        page = self.__check_nav.Check_if_nav(feature, page)  # Checks if user input is equal to p, m or X (navigation)
-        if feature in ("a", "b", "c", "n"):
+    def Check_feature(self, feature_choice, page):
+        page = self.__check_nav.Check_if_nav(feature_choice, page)  # Checks if user input is equal to p, m or X (navigation)
+        if feature_choice in ("a", "b", "c", "n"):
+            return True, page
+        else:
+            return False, page
+
+    def Check_payment(self, payment_choice, page):
+        page = self.__check_nav.Check_if_nav(payment_choice, page)  # Checks if user input is equal to p, m or X (navigation)
+        if payment_choice in ("1", "2", "3"):
             return True, page
         else:
             return False, page

@@ -80,7 +80,9 @@ class Print_rent_menu(object):
         print("~~Additional features~~")
         print(features)
         print("Final price: {}".format(price))
-        input("Press enter to book now!")
+        choice = input("Press 'c' to confirm: ").lower()
+
+        return choice
 
     def Page_8(self):
         os.system('cls||clear')
@@ -102,7 +104,7 @@ class Print_rent_menu(object):
         choice = input("Choose payment method: ")
         return choice
     
-    def Page_10(self):
+    def Page_10_1(self):
         os.system('cls||clear')
         print("~~Card info~~")
         card_num = input("Input card number: ")
@@ -111,7 +113,7 @@ class Print_rent_menu(object):
         input("Press enter to confirm.")
         return card_num, security_code, exp_date
 
-    def Page_11(self):
+    def Page_10_2(self):
         os.system('cls||clear')
         print("~~Insurance~~")
         print("Enter your creditcard information for insurance")
@@ -122,7 +124,7 @@ class Print_rent_menu(object):
         input("Press enter to confirm.")
         return card_num, security_code, exp_date
     
-    def Page_12(self, New_customer, car_info, date_info, feature_string):
+    def Page_11(self, New_customer, car_info, date_info, feature_string):
         os.system('cls||clear')
         print("~~Check-out~~")
         print(New_customer)
@@ -131,7 +133,7 @@ class Print_rent_menu(object):
         print(feature_string)
         input("Press enter to confirm.")
 
-    def Page_13(self, booking_num):
+    def Page_12(self, booking_num):
         os.system('cls||clear')
         print("Thanks for using our service and hope to see you soon!")
         print("Your booking number is: {}".format(booking_num))
