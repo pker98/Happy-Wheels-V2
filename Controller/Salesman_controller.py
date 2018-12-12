@@ -2,14 +2,17 @@ from UI.Print_main_menu import Print_main_menu
 from UI.Print_salesman_menu import Print_salesman_menu
 from Controller.Rent_controller import Rent_controller
 from Services.Salesman_service import Salesman_service
+from Respository.Log_repo import Log_repo
+from Controller.Order_controller import Order_controller
 
 class Salesman_controller(object):
     def __init__(self):
         self.__salesman = Print_salesman_menu() 
         self.__rent_car = Rent_controller()
         self.__get_info = Salesman_service()
-        self.Salesman_service = Salesman_service()
         self.__main_page = Print_main_menu()
+        self.confirmation_str = ""
+        self.order_controller = Order_controller()
 
     def sign_in_page(self):
         """Gets employee's ID and password and checks if it's valid"""
@@ -33,27 +36,45 @@ class Salesman_controller(object):
             self.__rent_car.Rent_page()
         # Search for order
         elif self.__option == "2":
-            booking_num = self.__salesman.find_order_page()
-            order_list = self.__get_info.get_order_info(booking_num)
-            for i in range(len(order_list)):
-                self.__salesman.print_orders(i+1, order_list[i])
-            input("")
+            self.order_controller.cancel_order_process()
         # Get customer information
         elif self.__option == "3":
             self.email = self.__salesman.customer_info_menu()
-            cust_val_string = self.__get_info.get_customer(self.email)
-            self.__salesman.customer_list(cust_val_string)
-            input("")
+            customer = self.__get_info.get_customer(self.email)
+            orders = self.__get_info.order_string()
+            delete = self.__salesman.customer_list(customer, orders)
+            if delete == "d":
+                self.__get_info.delete_customer(customer)
+                self.confirmation_str = "Customer"
+                action = "removed"
+                self.__get_info.delete_customer_to_log(self.__ID)
+                self.__salesman.confirmation(self.confirmation_str, action)
         # Get cars information
         elif self.__option == "4":
-            self.__info_choice = self.__salesman.cars_info_menu()
-            self.cars = self.__get_info.get_cars(self.__info_choice)
-            for car in self.cars:
-                plate_number = car.get_plate_number()
-                brand = car.get_brand()
-                location = car.get_location_string()
-                self.__salesman.car_lists(plate_number, brand, location)
-            input("")
+            self.__choice = self.__salesman.cars_info_menu()
+            if self.__choice == "1":
+                self.cars = self.__get_info.get_all_cars()
+            elif self.__choice == "2":
+                self.cars = self.__get_info.get_available_cars()
+            elif self.__choice == "3":
+                self.cars = self.__get_info.get_unavailable_cars()
+            elif self.__choice == "4":
+                plate_num, brand, size, location = self.__salesman.add_car()
+                self.__get_info.add_car_repo(plate_num, brand, size, location)
+                self.confirmation_str = "Car"
+                action = "added"
+                self.__salesman.confirmation(self.confirmation_str, action)
+                #Add to log
+                self.__get_info.add_to_log(self.__ID, brand, plate_num)
+
+
+            if self.__choice in ["1","2","3"]:
+                for car in self.cars:
+                    plate_number = car.get_plate_number()
+                    brand = car.get_brand()
+                    location = car.get_location_string()
+                    self.__salesman.car_lists(plate_number, brand, location)
+                input("")
         elif self.__option == "5":
             log = self.__get_info.get_log()
             self.__salesman.print_log(log)

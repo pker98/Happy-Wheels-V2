@@ -12,8 +12,8 @@ class Order:
         self.cust_email = cust_email
 
     def __str__(self):
-        return ("Customer email: {}\tPick up date: {}\tDrop off date: {}".format(self.cust_email,
-        self.pick_up_date,self.drop_off_date))
+        return ("Customer email: {:20}\tOrder number: {:20}\nPick up date: {:20}\tDrop off date: {:20}".format(self.cust_email,
+        self.order_num, self.pick_up_date,self.drop_off_date))
                                             ######################################################
     def __repr__(self):                     # Adda pöntun fyrir ofan með smiðnum ( __init__ )
         return repr([self.pick_up_date,self.drop_off_date,

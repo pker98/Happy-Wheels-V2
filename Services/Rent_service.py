@@ -14,7 +14,7 @@ class Rent_service(object):
         # UI's
         self.error = Print_error()
         # Repo's
-        self.car_class = Cars_repo()
+        self.car_repo = Cars_repo()
         self.order_repo = Orders_repo()
         self.customer_repo = Customer_repo()
         # Validations
@@ -35,7 +35,7 @@ class Rent_service(object):
         """Get car_dict from repo and get inputs from Rent controller. 
         Compare to get available car."""
         self.available_car_list = []
-        car_dict = self.car_class.get_cars()
+        car_dict = self.car_repo.get_cars()
         for value in car_dict.values():
             if location == value.get_location() and size == value.get_car_size():
                 new_pick_up_date, new_drop_off_date = date
@@ -134,16 +134,17 @@ class Rent_service(object):
     def get_price(self, feature_list, car_obj):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
         price, insurance = car_obj.get_pri_ins()
-        final_price = int(price) + int(insurance)
+        additional_price = int(insurance)
         for feature in feature_list:
             if feature == "a":
-                final_price += 5000
+                additional_price += 5000
             elif feature == "b":
-                final_price += 1000
+                additional_price += 1000
             elif feature == "c":
-                final_price += 6500
-        return str(final_price)
+                additional_price += 6500
+        return additional_price, int(price)
 
+        
     def make_date_str(self, date):
         """Takes the self.__date_list and turns it into a string"""
         pick_up, drop_off = date
@@ -175,7 +176,7 @@ class Rent_service(object):
                 if key == plate_num:
                     values.append(new_order)
                     break
-                else:
+                elif plate_num not in order_dict:
                     order_dict[plate_num] = [new_order]
                     break
         else:

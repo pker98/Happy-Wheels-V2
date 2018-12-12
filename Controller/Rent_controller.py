@@ -3,6 +3,7 @@ from Services.Rent_service import Rent_service
 from Utilizations.Rent_validation import Rent_validation
 from UI.Print_error import Print_error
 from Models.Customer import Customer
+from Utilizations.Formulas import Formulas
 import datetime
 
 class Rent_controller(object):
@@ -20,9 +21,9 @@ class Rent_controller(object):
         loop, set up page by page for easy navigation """
         Page = 1   # If user inputs correctly he will go on next page
         # While loop used so the user can navigate back and forth in the system
-        while Page < 9: # Stops running when user has completed the rental process
+        self.section_valid = 0 # Used on page 8 for validation
+        while Page < 11: # Stops running when user has completed the rental process
             # Variables
-            self.section_valid = 0 # Used on page 8 for validation
             if Page == 1:
                 # Open location menu - Returns location - Checks if correct input
                 self.location = self.__rent_menu.Page_1()
@@ -113,9 +114,11 @@ class Rent_controller(object):
                     elif not Valid and choice not in ("x", "p", "m") and Page != 10:
                         self.error.Wrong_feature_choice()   # Prints error message
                 
-            if Page == 7:
+            elif Page == 7:
                 # Returns final price
-                price = self.__Rent_service.get_price(self.feature_list, car_obj)
+                additional_price, base_price = self.__Rent_service.get_price(self.feature_list, car_obj)
+                price_calculation = Formulas()
+                price = price_calculation.calculate_price(base_price, self.date_list, additional_price)
                 choice = self.__rent_menu.Page_7(self.car_info, price, self.date_info, self.feature_string)
                 Valid, Page = self.__Rent_valid.Check_confirmation(choice, Page)
                 if Valid:
@@ -163,18 +166,18 @@ class Rent_controller(object):
                 elif choice == "3":         # Opens up 
                     card, security_code, exp_date = self.__rent_menu.Page_10_2()
         
-        new_customer = Customer(first_name, last_name, date_of_birth, email, country, address, zip_code, phone, card, security_code, exp_date)
-        
-        # Receipt print
-        self.__rent_menu.Page_11(new_customer, self.car_info, self.date_info, self.feature_string)
-        
-        # Booking number and thank you page
-        booking_num = self.__Rent_service.make_booking_num()
-        self.__Rent_service.add_order_to_dict(booking_num, email, car_obj.get_plate_number(), self.date_list)
-        self.__Rent_service.update_customer_repo(new_customer)
-        self.__rent_menu.Page_12(booking_num)
+                new_customer = Customer(first_name, last_name, date_of_birth, email, country, address, zip_code, phone, card, security_code, exp_date)
+                
+                # Receipt print
+                self.__rent_menu.Page_11(new_customer, self.car_info, self.date_info, self.feature_string)
+                
+                # Booking number and thank you page
+                booking_num = self.__Rent_service.make_booking_num()
+                self.__Rent_service.add_order_to_dict(booking_num, email, car_obj.get_plate_number(), self.date_list)
+                self.__Rent_service.update_customer_repo(new_customer)
+                self.__rent_menu.Page_12(booking_num)
 
-        self.__Rent_service.update_log(first_name, last_name, car_obj, self.date_list)
+                self.__Rent_service.update_log(first_name, last_name, car_obj, self.date_list)
 
 
 

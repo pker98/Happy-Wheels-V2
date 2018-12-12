@@ -19,7 +19,7 @@ class Customer(object):
         self.country, self.address, self.zip_code, self.phone])
     
     def __str__(self):
-        return "First name: {}\tLast name: {}\tEmail: {}\nCountry: {}\tAddress: {}\tZip code: {}\tPhone: {}\nCard: {}".format(self.first_name, self.last_name, 
+        return "First name: {:10}\tLast name: {:10}\tEmail: {:10}\tCountry: {:10}\nAddress: {:10}\tZip code: {:10}\tPhone: {:10}\tCard: {:10}".format(self.first_name, self.last_name, 
             self.email, self.country, self.address, self.zip_code, self.phone, self.card)
     
     def get_first_name(self):

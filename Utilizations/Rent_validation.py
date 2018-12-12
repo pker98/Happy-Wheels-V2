@@ -42,7 +42,7 @@ class Rent_validation():
             return False, page
         # Checks if pick_up- and drop_off dates are bigger than the date today and smaller than the date after 5 years
         # Also checks if pick_up date is smaller than drop_off date
-        if datetime.date.today() < pickup_date < date_after_5years \
+        if datetime.date.today() <= pickup_date < date_after_5years \
             and datetime.date.today() < dropoff_date < date_after_5years \
             and pickup_date < dropoff_date:         
             return True, page

@@ -5,6 +5,7 @@ from Respository.Customer_repo import Customer_repo
 from Models.Customer import Customer
 from Respository.Log_repo import Log_repo 
 from Respository.Orders_repo import Orders_repo
+from Models.Car import Car
 import datetime
 
 class Salesman_service(object):
@@ -16,51 +17,53 @@ class Salesman_service(object):
         self.log_repo = Log_repo()
         self.get_orders_dict = Orders_repo()
     
-    def get_cars(self, choice):
+    def get_all_cars(self):
         self.cars_dict = self.cars_info.get_cars()
-        
-        if choice == "1":
-            return self.cars_dict.values()
+        return self.cars_dict.values()
 
-        elif choice == "2":
-            self.available_car_list = []
-            car_dict = self.cars_info.get_cars()
-            today = datetime.date.today()
-            for value in car_dict.values():
-                old_orders = value.get_orders()
-                if old_orders != []:
-                    for order in old_orders:
-                        old_pick_up, old_drop_off = order
-                        if (old_pick_up <= today <= old_drop_off): 
-                            valid = False
-                        else:
-                            valid = True
+    def get_available_cars(self):
+        self.available_car_list = []
+        car_dict = self.cars_info.get_cars()
+        today = datetime.date.today()
+        for value in car_dict.values():
+            old_orders = value.get_orders()
+            if old_orders != []:
+                for order in old_orders:
+                    old_pick_up, old_drop_off = order
+                    if (old_pick_up <= today <= old_drop_off): 
+                        valid = False
+                    else:
+                        valid = True
 
-                    if valid == True:
-                        self.available_car_list.append(value)
-                else:
-                    self.available_car_list.append(value)                          
-            return self.available_car_list
+                if valid == True:
+                    self.available_car_list.append(value)
+            else:
+                self.available_car_list.append(value)                          
+        return self.available_car_list
 
-        elif choice == "3":
-            self.unavailable_car_list = []
-            car_dict = self.cars_info.get_cars()
-            today = datetime.date.today()
-            for value in car_dict.values():
-                old_orders = value.get_orders()
-                if old_orders != []:
-                    for order in old_orders:
-                        old_pick_up, old_drop_off = order
-                        if (old_pick_up <= today <= old_drop_off): 
-                            valid = True
-                        else:
-                            valid = False
+    def get_unavailable_cars(self):
+        self.unavailable_car_list = []
+        car_dict = self.cars_info.get_cars()
+        today = datetime.date.today()
+        for value in car_dict.values():
+            old_orders = value.get_orders()
+            if old_orders != []:
+                for order in old_orders:
+                    old_pick_up, old_drop_off = order
+                    if (old_pick_up <= today <= old_drop_off): 
+                        valid = True
+                    else:
+                        valid = False
 
-                    if valid == True:
-                        self.unavailable_car_list.append(value)
-                                          
-            return self.unavailable_car_list
-            
+                if valid == True:
+                    self.unavailable_car_list.append(value)
+                                        
+        return self.unavailable_car_list
+    
+    def add_car_repo(self, plate_num, brand, size, location ):
+        """Adds car to car repo"""
+        self.new_car = Car(plate_num, brand, size, location)
+        self.cars_info.add_car(plate_num, brand, size, location)
 
     def get_customer(self, email):
         #nær í customer keys úr dict 
@@ -68,7 +71,18 @@ class Salesman_service(object):
         #ef keyið passar input frá notanda, returna value úr þeim key
         for key, value in self.customer_dict.items():
             if key == email:
-                return "Name: {}\tPhone: {}".format(value.get_first_name(), value.get_phone())
+                self.customer = value
+                return self.customer
+    
+    def order_string(self):
+        """Returns a string of customer orders"""
+        order_string = "\n~~Customer orders~~"
+        orders = self.customer.get_orders()
+        for order in orders:
+            order_string += "\n" + str(order) + "\n"
+        return order_string
+            
+
 
 
     def salesman_ID_pw(self,ID, pw):
@@ -76,7 +90,8 @@ class Salesman_service(object):
         salesman_dict = self.salesman_info.get_salesmen()
         for key, value in salesman_dict.items():
             if key == ID and pw == value.get_password():
-                self.logged_salesman = key
+                self.salesman_id = key
+                self.logged_salesman = value
                 valid = True
                 return valid
         return valid
@@ -84,7 +99,7 @@ class Salesman_service(object):
     def change_pw(self, new_pw):
         salesman_dict = self.salesman_info.get_salesmen()
         for key, value in salesman_dict.items():
-            if key == self.logged_salesman:
+            if key == self.salesman_id:
                 salesman_object = value
                 value.change_pw(new_pw)
                 break
@@ -104,6 +119,28 @@ class Salesman_service(object):
 
     def get_log(self):
         return self.log_repo.Read_repo()
+    
+    def delete_customer(self, customer):
+        cust_dict = self.customer_info.get_customers()
+        cust_dict.pop(customer.get_email())
+        self.customer_info.add_customers(cust_dict)
 
+        order_dict = self.get_orders_dict.get_orders()
+        for plate_num, orders in order_dict.items():
+            for order in orders:
+                if customer.get_email() == order.get_cust_email():
+                    orders.remove(order)
+
+        self.get_orders_dict.update_order_file(order_dict)
+    
+    def add_to_log(self, ID, brand, plate_num):
+        """Updates log when salesman adds a car to the system"""
+        update_repo = self.log_repo
+        update_repo.Update_repo("{}, ID: {}, Added {} with plate number {} in {}".format(self.logged_salesman.get_name(), ID, brand, plate_num, self.new_car.get_location_string()))
+
+    def delete_customer_to_log(self, ID):
+        """Updates log when salesman deletes order"""
+        update_repo = self.log_repo
+        update_repo.Update_repo("{}, ID: {}, deleted customer {} {}".format(self.logged_salesman.get_name(), ID, self.customer.get_first_name(), self.customer.get_last_name()))
 
         

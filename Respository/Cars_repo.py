@@ -5,13 +5,9 @@ class Cars_repo:
     def __init__self(self):
         pass
 
-    # def add_video(self, Car):
-    #     # first add to file then to private list
-    #     with open("data/Cars.csv", "a+") as Cars_file:
-    #         car_size = video.get_car_size()
-    #         plate_number = video.get_plate_number()
-    #         brand = get_video.brand()
-    #         Cars_file.write("{},{},{}\n".format(car_size, plate_number, brand))
+    def add_car(self, plate_num, brand, size, location):
+        with open("./data/Cars.csv", "a+") as Cars_file:
+            Cars_file.write("\n{},{},{},{}".format(plate_num, brand, size, location))
 
     def get_cars(self):
         self.car_dict = {}
