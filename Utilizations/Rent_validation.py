@@ -8,12 +8,12 @@ class Rent_validation():
 
     def Check_if_nav(self, user_input, page):
         """ Checks if user input is p for previous, h for home or x for exit
-        before doing anything else """
+        before doing anything else then  """
         if user_input == "p":   # Goes to previous page
             page -= 1
         elif user_input == "m": # Goes back to start of program (Main_controller)
             # self.__main_controller.Main_page()
-            pass
+            page = 10
         elif user_input == "x": # Exits 
             exit()
         return page
@@ -83,3 +83,65 @@ class Rent_validation():
             return True, page
         else:
             return False, page
+
+    def Check_personal_info_1(self, info_list, page):   # first_name, last_name, date_of_birth, email
+        """ Verifies first_name, last_name, date_of_birth and email,
+        if the info given passes all the tests then this function returns True"""
+        for info in info_list:    
+            page = self.__check_nav.Check_if_nav(info, page)  # Checks if user input is equal to p, m or x (navigation)
+            if page != 8:
+                return False, page 
+
+        for letter in info_list[:2]: 
+            if not letter.isalpha():    # Checks if first  and last name only contains letters   
+                return False, page
+
+        try:    # Checks if date_of_birth is valid
+            mm = info_list[2][:2]
+            dd = info_list[2][2:4]
+            yyyy = info_list[2][4:8]
+            birthday = datetime.date(int(yyyy), int(mm), int(dd))
+        except(ValueError):
+            return False, page
+
+        Twentyone_years = datetime.timedelta(365*21)
+        
+        if datetime.date.today() - birthday < Twentyone_years:    # Checks if user is 21 years old or older
+            return False, page
+
+        check = 0
+        for letter in info_list[3]: # Checks if '@' and '.' in email
+            if letter == "@":
+                check += 1
+            elif letter == ".":
+                check += 1
+            if check == 2:
+                break
+        if check < 2:
+            return False, page
+        return True, page
+            
+    def Check_personal_info_2(self, info_list, page):
+        """ Verifies country, zip_code and phone"""
+        for info in info_list:    
+            page = self.__check_nav.Check_if_nav(info, page)  # Checks if user input is equal to p, m or x (navigation)
+            if page != 8:
+                return False, page 
+
+        for letter in info_list[0]: 
+            if not letter.isalpha():    # Checks if country only contains letters   
+                return False, page
+
+        for number in info_list[2]:
+            if number.isalpha():    # Checks if zip_code contains only numbers
+                return False, page
+
+        for number in info_list[3]:
+            if number.isalpha():    # Checks if phone number contains only numbers
+                return False, page
+        return True, page
+        
+
+
+
+            

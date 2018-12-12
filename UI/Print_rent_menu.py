@@ -84,24 +84,34 @@ class Print_rent_menu(object):
 
         return choice
 
-    def Page_8(self):
+    def Page_8_1(self):
         os.system('cls||clear')
         first_name = input("First name: ")
-        last_name = input("Last_name: ")
-        date_of_birth = input("Date of birth: ")
-        email = input("Email:")
+        last_name = input("Last name: ")
+        date_of_birth = input("Date of birth(mmddyyyy): ")
+        email = input("Email: ")
+        choice = input("Press 'c' to confirm: ").lower()
+
+        return first_name, last_name, date_of_birth, email, choice
+
+    def Page_8_2(self):
+        os.system('cls||clear')
         country = input("Country: ")
         address = input("Address: ")
         zip_code = input("Zip code: ")
         phone = input("Phone number: ")
         driver = input("Extra driver: ")
-        input("Press enter to confirm.")
-        return first_name, last_name, date_of_birth, email, country, address, zip_code, phone, driver
+        choice = input("Press 'c' to confirm: ").lower()
+
+        return country, address, zip_code, phone, driver, choice
     
     def Page_9(self):
         os.system('cls||clear')
-        print("1. Pay now with credit card.\n2. Pay now with debit card.\n3. Pay when I pick up.")
+        print("1. Pay now with credit card")
+        print("2. Pay now with debit card.")
+        print("3. Pay when I pick up.")
         choice = input("Choose payment method: ")
+
         return choice
     
     def Page_10_1(self):
@@ -111,6 +121,7 @@ class Print_rent_menu(object):
         security_code = input("Input security code: ")
         exp_date = input("Enter expiration date(mmyy):")
         input("Press enter to confirm.")
+
         return card_num, security_code, exp_date
 
     def Page_10_2(self):
@@ -122,6 +133,7 @@ class Print_rent_menu(object):
         exp_date = input("Enter expiration date(mmyy):")
         print("If you do not show up or forget to cancel order, the company will charge you full price.")
         input("Press enter to confirm.")
+        
         return card_num, security_code, exp_date
     
     def Page_11(self, New_customer, car_info, date_info, feature_string):

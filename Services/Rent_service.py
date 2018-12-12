@@ -126,8 +126,10 @@ class Rent_service(object):
         return self.feature_list
 
     def reset_features(self):
-        """ When user goes to previous page from feature menu the feature_list is resetted """
+        """ Resets the list of features """
         self.feature_list = []
+        self.feature_string = ""
+        return self.feature_list, self.feature_string
 
     def get_price(self, feature_list, car_obj):
         """Returns final price for the customer, takes the list of additional features and calculates the price."""
