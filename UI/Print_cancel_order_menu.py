@@ -1,5 +1,5 @@
 import os
-class Cancel_order_Menu:
+class Print_cancel_order_menu:
     def __init__(self):
         pass
 

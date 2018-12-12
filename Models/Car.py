@@ -1,4 +1,4 @@
-from Respository.Orders_repo import Orders_repo
+from Repository.Orders_repo import Orders_repo
 from Models.Order import Order
 class Car(object):
     def __init__(self, plate_number, brand, car_size, location, price=0, insurance=0):

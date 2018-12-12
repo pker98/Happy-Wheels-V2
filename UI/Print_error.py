@@ -1,6 +1,8 @@
 import os
 
 class Print_error():
+    """ Validation for rent_menu and salesman_menu """
+    ### Rent_menu validations ###
     def Wrong_location(self):
         os.system('cls||clear')
         print("Invalid location")
@@ -70,3 +72,6 @@ class Print_error():
         print("\t2. Card number contains 16 numbers")
         print("Choose 'c' to confirm\n")
         input("Press enter to continue ")
+        #################################
+        ### Salesman_menu validations ###
+        

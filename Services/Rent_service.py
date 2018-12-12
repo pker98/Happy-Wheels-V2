@@ -1,12 +1,12 @@
-from Respository.Cars_repo import Cars_repo
-from Respository.Orders_repo import Orders_repo
-from Respository.Customer_repo import Customer_repo
+from Repository.Cars_repo import Cars_repo
+from Repository.Orders_repo import Orders_repo
+from Repository.Customer_repo import Customer_repo
 from Models.Car import Car
 from Models.Order import Order
 from Models.Customer import Customer
 from Utilizations.Rent_validation import Rent_validation
 from UI.Print_error import Print_error
-from Respository.Log_repo import Log_repo
+from Repository.Log_repo import Log_repo
 import datetime, os
 
 class Rent_service(object):

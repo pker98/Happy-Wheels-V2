@@ -1,10 +1,10 @@
-from Respository.Cars_repo import Cars_repo
-from Respository.Salesman_repo import Salesman_repo
+from Repository.Cars_repo import Cars_repo
+from Repository.Salesman_repo import Salesman_repo
 from Models.Salesman import Salesman 
-from Respository.Customer_repo import Customer_repo
+from Repository.Customer_repo import Customer_repo
 from Models.Customer import Customer
-from Respository.Log_repo import Log_repo 
-from Respository.Orders_repo import Orders_repo
+from Repository.Log_repo import Log_repo 
+from Repository.Orders_repo import Orders_repo
 from Models.Car import Car
 import datetime
 

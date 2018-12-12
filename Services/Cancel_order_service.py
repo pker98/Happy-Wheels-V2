@@ -1,4 +1,4 @@
-from Respository.Orders_repo import Orders_repo
+from Repository.Orders_repo import Orders_repo
 from Models.Order import Order
 class Cancel_order_service:
     def __init__(self):

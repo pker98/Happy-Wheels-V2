@@ -1,4 +1,4 @@
-from Respository.Orders_repo import Orders_repo
+from Repository.Orders_repo import Orders_repo
 class Customer(object):
     def __init__(self, first_name, last_name, date_of_birth, email, country, address, zip_code, phone, card, security_code, exp_date, orders=[]):
         self.email = email

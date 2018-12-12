@@ -1,18 +1,24 @@
 from UI.Print_main_menu import Print_main_menu
 from UI.Print_salesman_menu import Print_salesman_menu
+from UI.Print_error import Print_error
 from Controller.Rent_controller import Rent_controller
 from Services.Salesman_service import Salesman_service
-from Respository.Log_repo import Log_repo
+from Repository.Log_repo import Log_repo
 from Controller.Order_controller import Order_controller
 
 class Salesman_controller(object):
     def __init__(self):
+        # UI's
         self.__salesman = Print_salesman_menu() 
-        self.__rent_car = Rent_controller()
-        self.__get_info = Salesman_service()
         self.__main_page = Print_main_menu()
-        self.confirmation_str = ""
+        # Controllers
+        self.__rent_car = Rent_controller()
         self.order_controller = Order_controller()
+        # Services
+        self.__get_info = Salesman_service()
+        # Variables
+        self.confirmation_str = ""
+        
 
     def sign_in_page(self):
         """Gets employee's ID and password and checks if it's valid"""

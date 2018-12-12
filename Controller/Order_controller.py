@@ -1,5 +1,5 @@
-from Respository.Orders_repo import Orders_repo
-from UI.Cancel_order_menu import Cancel_order_Menu
+from Repository.Orders_repo import Orders_repo
+from UI.Print_cancel_order_menu import Print_cancel_order_menu
 from Services.Cancel_order_service import Cancel_order_service
 
 
@@ -9,7 +9,7 @@ class Order_controller:
 
     
     def cancel_order_process(self):
-        menu = Cancel_order_Menu()
+        menu = Print_cancel_order_menu()
         order_num = menu.find_by_num()
         order = self.cancel_service.print_order(order_num)
         menu.print_order(order)
