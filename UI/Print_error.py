@@ -56,8 +56,17 @@ class Print_error():
         print("\t3. Phone can not contain letters\n")
         input("Press enter to continue ")
 
-    def Wrong_payment_metho(self):
+    def Wrong_payment_method(self):
         os.system('cls||clear')
         print("Invalid payment method\n")
         print("Choose option 1 - 3\n")
+        input("Press enter to continue ")
+
+    def Wrong_card_info(self):
+        os.system('cls||clear')
+        print("Invalid card info")
+        print("One of the following went wrong:")
+        print("\t1. Card number can not contain letters")
+        print("\t2. Card number contains 16 numbers")
+        print("Choose 'c' to confirm\n")
         input("Press enter to continue ")

@@ -1,20 +1,18 @@
-# from Controller.Main_controller import Main_controller
+
 import datetime
 
 class Rent_validation():
     def __init__(self):
-        # self.__main_controller = Main_controller()
         pass
 
-    def Check_if_nav(self, user_input, page):
+    def Check_if_nav(self, choice, page):
         """ Checks if user input is p for previous, h for home or x for exit
         before doing anything else then  """
-        if user_input == "p":   # Goes to previous page
+        if choice == "p" and page != 12:   # Goes to previous page - if page == 12(receipt page), then user can not go back
             page -= 1
-        elif user_input == "m": # Goes back to start of program (Main_controller)
-            # self.__main_controller.Main_page()
-            page = 10
-        elif user_input == "x": # Exits 
+        elif choice == "m": # Goes back to start of program 
+            page = 13
+        elif choice == "x": # Exits 
             exit()
         return page
 
@@ -77,13 +75,6 @@ class Rent_validation():
         else:
             return False, page
 
-    def Check_payment(self, payment_choice, page):
-        page = self.__check_nav.Check_if_nav(payment_choice, page)  # Checks if user input is equal to p, m or X (navigation)
-        if payment_choice in ("1", "2", "3"):
-            return True, page
-        else:
-            return False, page
-
     def Check_personal_info_1(self, info_list, page):   # first_name, last_name, date_of_birth, email
         """ Verifies first_name, last_name, date_of_birth and email,
         if the info given passes all the tests then this function returns True"""
@@ -106,7 +97,7 @@ class Rent_validation():
 
         Twentyone_years = datetime.timedelta(365*21)
         
-        if datetime.date.today() - birthday < Twentyone_years:    # Checks if user is 21 years old or older
+        if datetime.date.today() - birthday < Twentyone_years:    # Checks if user is atleast 21 years old
             return False, page
 
         check = 0
@@ -133,15 +124,55 @@ class Rent_validation():
                 return False, page
 
         for number in info_list[2]:
-            if number.isalpha():    # Checks if zip_code contains only numbers
+            if number.isalpha():    # Checks if zip code contains only numbers
                 return False, page
 
         for number in info_list[3]:
             if number.isalpha():    # Checks if phone number contains only numbers
                 return False, page
         return True, page
-        
 
+    def Check_payment(self, payment_choice, page):
+        page = self.__check_nav.Check_if_nav(payment_choice, page)  # Checks if user input is equal to p, m or X (navigation)
+        if payment_choice in ("1", "2", "3"):
+            return True, page
+        else:
+            return False, page
 
+    def Check_card_info(self, info_list, page): # card, security_code, exp_date, choice
+        for info in info_list:    
+            page = self.__check_nav.Check_if_nav(info, page)  # Checks if user input is equal to p, m or x (navigation)
+            if page != 10:
+                return False, page
 
-            
+        if info_list[3] != "c":
+            return False, page
+
+        # Strips spaces and dashes out of card number
+        if " " in info_list[0]:
+            info_list[0] = info_list[0].replace(" ", "")
+        elif "-" in info_list[0]:
+            info_list[0] = info_list[0].replace("-", "")
+
+        # Checks if card number has length of 16 and security code has length of 3
+        if len(info_list[0]) != 16 and len(info_list[1]) != 3 : # Checks if card number has length of 16 and security code has length of 3
+            return False, page
+
+        for number in info_list[0]: # Checks if card contains only numbers
+            if number.isalpha():
+                return False, page
+
+        for number in info_list[1]: # Checks if security code contains only numbers
+            if number.isalpha():
+                return False, page
+
+        # expiration date format: mmyy
+        # mm = info_list[2][:2]
+        # yy = info_list[2][2:4]
+        # datet = '2015-12-15'
+
+        # ExpirationDate = datetime.strptime(datet,"%Y-%m-%d").date()
+        # now = date.today()
+        # if ExpirationDate >= now:
+        #     pass
+        return True, page         

@@ -20,9 +20,10 @@ class Rent_controller(object):
         """ User's process when renting a car, put together in a while 
         loop, set up page by page for easy navigation """
         Page = 1   # If user inputs correctly he will go on next page
+        self.section_valid = 0 # Used for Page 8 to navigate between personal information 1 and 2
+
         # While loop used so the user can navigate back and forth in the system
-        self.section_valid = 0 # Used on page 8 for validation
-        while Page < 11: # Stops running when user has completed the rental process
+        while Page < 13: # Stops running when user has completed the rental process
             # Variables
             if Page == 1:
                 # Open location menu - Returns location - Checks if correct input
@@ -31,7 +32,7 @@ class Rent_controller(object):
                 if Valid:
                     Page += 1   # Moves to next page
                 elif Page == 0:
-                    Page = 10
+                    Page = 13
                 else:
                     self.error.Wrong_location() # Prints error message
 
@@ -43,7 +44,7 @@ class Rent_controller(object):
                     Page += 1   # Moves to next page
                 elif Page == 1:
                     pass    # Moves to previous page
-                elif Page != 10:
+                elif Page != 13:
                     self.error.Wrong_date() # Prints error message
 
             elif Page == 3:
@@ -57,7 +58,7 @@ class Rent_controller(object):
                     Page += 1   # Moves to next page
                 elif Page == 2:
                     pass    # Moves to previous page
-                elif Page != 10:
+                elif Page != 13:
                     self.error.Wrong_vehicle_size() # Prints error message
 
             elif Page == 4:
@@ -76,7 +77,7 @@ class Rent_controller(object):
                     Page += 1   # Moves to next page
                 elif Page == 3:
                     pass    # Moves to previous page
-                elif Page != 10:
+                elif Page != 13:
                     self.error.Wrong_car_choice()   # Prints error message 
 
             elif Page == 5:
@@ -94,7 +95,7 @@ class Rent_controller(object):
                     Page += 1   # Moves to next page
                 elif Page == 4:
                     pass    # Moves to previous page
-                elif Page != 10:
+                elif Page != 13:
                     self.error.Wrong_key_pressed()   # Prints error message 
 
             elif Page == 6:
@@ -111,7 +112,7 @@ class Rent_controller(object):
                     elif Valid and choice == "n":
                         Page += 1 # Moves to next page
                         break
-                    elif not Valid and choice not in ("x", "p", "m") and Page != 10:
+                    elif not Valid and choice not in ("x", "p", "m") and Page != 13:
                         self.error.Wrong_feature_choice()   # Prints error message
                 
             elif Page == 7:
@@ -125,7 +126,7 @@ class Rent_controller(object):
                     Page += 1 # Moves to next page
                 elif Page == 6:
                     pass    # Moves to previous page
-                elif Page != 10:
+                elif Page != 13:
                     self.error.Wrong_key_pressed()   # Prints error message 
 
             elif Page == 8:
@@ -134,7 +135,7 @@ class Rent_controller(object):
                     personal_info_list_1 = first_name, last_name, date_of_birth, email, choice = self.__rent_menu.Page_8_1()
                     Valid, Page = self.__Rent_valid.Check_personal_info_1(personal_info_list_1, Page)
                 elif self.section_valid == 1:
-                    personal_info_list_2 = country, address, zip_code, phone, driver, choice = self.__rent_menu.Page_8_2()
+                    personal_info_list_2 = country, address, zip_code, phone, choice = self.__rent_menu.Page_8_2()
                     Valid, Page = self.__Rent_valid.Check_personal_info_2(personal_info_list_2, Page)
 
                 if Valid:
@@ -142,8 +143,10 @@ class Rent_controller(object):
                         Page += 1   # Moves to next page
                     self.section_valid = 1
                 elif Page == 7:
-                    pass    # Moves to previous page
-                elif Page != 10:
+                    if self.section_valid == 1: # If not true, moves to previous page
+                        Page += 1
+                        self.section_valid = 0
+                elif Page != 13:
                     if self.section_valid == 0:
                         self.error.Wrong_personal_info_1()
                     elif self.section_valid == 1:
@@ -151,33 +154,55 @@ class Rent_controller(object):
 
             elif Page == 9:
                 # Opens up payment method menu - Returns payment method - Checks if correct input
-                choice = self.__rent_menu.Page_9()
-                Valid, Page = self.__Rent_valid.Check_payment(choice, Page)
+                self.payment_choice = self.__rent_menu.Page_9()
+                Valid, Page = self.__Rent_valid.Check_payment(self.payment_choice, Page)
                 if Valid:
-                    Page += 1
+                    Page += 1 # Moves to next page
                 elif Page == 8:
                     pass    # Moves to previous page
-                else:
-                    self.error.Wrong_car_choice()   # Prints error message 
+                elif Page != 13:
+                    self.error.Wrong_payment_method()   # Prints error message 
                     
             elif Page == 10:
-                if choice in ("1", "2"):    # Opens credit/debit card payment menu
-                    card, security_code, exp_date = self.__rent_menu.Page_10_1()
-                elif choice == "3":         # Opens up 
-                    card, security_code, exp_date = self.__rent_menu.Page_10_2()
-        
-                new_customer = Customer(first_name, last_name, date_of_birth, email, country, address, zip_code, phone, card, security_code, exp_date)
+                # Opens up card information menu - Returns card info method - Checks if correct input
+                if self.payment_choice in ("1", "2"):    # Opens credit/debit card payment menu
+                    card, security_code, exp_date, choice = self.__rent_menu.Page_10_1()
+                elif self.payment_choice == "3":         # Opens up credit card insurance menu
+                    card, security_code, exp_date, choice = self.__rent_menu.Page_10_2()
+                card_info_list = [card, security_code, exp_date, choice]    # List of card info
+                Valid, Page = self.__Rent_valid.Check_card_info(card_info_list, Page)
+                if Valid:
+                    Page += 1   # Moves to next page
+                elif Page == 9:
+                    pass    # Moves to previous page
+                elif Page != 13:
+                    self.error.Wrong_card_info()   # Prints error message
+
+            elif Page == 11:
+                # Makes instance of Customer
+                new_customer = Customer(first_name, last_name, date_of_birth, email, country, 
+                address, zip_code, phone, card, security_code, exp_date)
                 
-                # Receipt print
-                self.__rent_menu.Page_11(new_customer, self.car_info, self.date_info, self.feature_string)
-                
+                # Opens up order confirmation menu - Returns choice - Checks if correct input
+                choice = self.__rent_menu.Page_11(new_customer, self.car_info, self.date_info, self.feature_string)
+                Valid, Page = self.__Rent_valid.Check_confirmation(choice, Page)
+                if Valid:
+                    Page += 1 # Moves to next page
+                elif Page == 10:
+                    pass    # Moves to previous page
+                elif Page != 13:
+                    self.error.Wrong_key_pressed()   # Prints error message
+
+            elif Page == 12:
                 # Booking number and thank you page
+                # Sends information to repos (LOG, customer, order)
                 booking_num = self.__Rent_service.make_booking_num()
                 self.__Rent_service.add_order_to_dict(booking_num, email, car_obj.get_plate_number(), self.date_list)
                 self.__Rent_service.update_customer_repo(new_customer)
-                self.__rent_menu.Page_12(booking_num)
-
                 self.__Rent_service.update_log(first_name, last_name, car_obj, self.date_list)
+                self.__rent_menu.Page_12(booking_num)
+                Page += 1
+                
 
 
 
