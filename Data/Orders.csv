@@ -1,7 +1,5 @@
 plate_num,pick_up_date,drop_off_date,order_num,cust_email
 DE-321,2019-02-02,2019-02-06,1,david@gmail.com
 AB-123,2018-12-14,2018-12-16,2,frikki@gmail.com
-AB-123,2018-12-10,2018-12-13,3,david@gmail.com
-AB-123,2019-03-04,2019-03-05,5,email@punktur.is
 EG-476,2019-03-04,2019-03-05,4,flakkari@prakkari.is
 RT-789,2019-03-05,2019-03-06,6,email@xd.is

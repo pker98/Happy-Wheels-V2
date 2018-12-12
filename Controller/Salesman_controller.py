@@ -9,13 +9,12 @@ from Controller.Order_controller import Order_controller
 class Salesman_controller(object):
     def __init__(self):
         # UI's
-        self.__salesman = Print_salesman_menu() 
-        self.__main_page = Print_main_menu()
+        self.__salesman_menu = Print_salesman_menu() 
         # Controllers
-        self.__rent_car = Rent_controller()
-        self.order_controller = Order_controller()
+        self.__rent_controller = Rent_controller()
+        self.__order_controller = Order_controller()
         # Services
-        self.__get_info = Salesman_service()
+        self.__salesman_service = Salesman_service()
         # Variables
         self.confirmation_str = ""
         
@@ -25,53 +24,56 @@ class Salesman_controller(object):
         valid = False
         while valid == False:
             # Get ID
-            self.__ID = self.__salesman.ID_menu()
+            self.__ID = self.__salesman_menu.ID_menu()
             # Get password 
-            self.__password = self.__salesman.password_menu(self.__ID)
+            self.__password = self.__salesman_menu.password_menu(self.__ID)
             #Check whether it's valid
-            valid = self.__get_info.salesman_ID_pw(self.__ID,self.__password)
+            valid = self.__salesman_service.salesman_ID_pw(self.__ID,self.__password)
             if valid == False:
                 try_again = input("\nID or password is invalid. Try again? (y/n): ").lower()
                 if try_again != "y":
                     break
 
         # Prints Salesman menu
-        self.__option = self.__salesman.salesman_main_page()
+        self.__option = self.__salesman_menu.salesman_main_page()
         # Get rent process
         if self.__option == "1":
-            self.__rent_car.Rent_page()
+            self.__rent_controller.Rent_page()
         # Search for order
         elif self.__option == "2":
-            self.order_controller.cancel_order_process()
+            self.__order_controller.cancel_order_process()
         # Get customer information
         elif self.__option == "3":
-            self.email = self.__salesman.customer_info_menu()
-            customer = self.__get_info.get_customer(self.email)
-            orders = self.__get_info.order_string()
-            delete = self.__salesman.customer_list(customer, orders)
+            self.email = self.__salesman_menu.customer_info_menu()
+            customer = self.__salesman_service.get_customer(self.email)
+            if type(customer) is object:
+                orders = self.__salesman_service.order_string()
+            else:
+                orders = ""
+            delete = self.__salesman_menu.customer_list(customer, orders)
             if delete == "d":
-                self.__get_info.delete_customer(customer)
+                self.__salesman_service.delete_customer(customer)
                 self.confirmation_str = "Customer"
                 action = "removed"
-                self.__get_info.delete_customer_to_log(self.__ID)
-                self.__salesman.confirmation(self.confirmation_str, action)
+                self.__salesman_service.delete_customer_to_log(self.__ID)
+                self.__salesman_menu.confirmation(self.confirmation_str, action)
         # Get cars information
         elif self.__option == "4":
-            self.__choice = self.__salesman.cars_info_menu()
+            self.__choice = self.__salesman_menu.cars_info_menu()
             if self.__choice == "1":
-                self.cars = self.__get_info.get_all_cars()
+                self.cars = self.__salesman_service.get_all_cars()
             elif self.__choice == "2":
-                self.cars = self.__get_info.get_available_cars()
+                self.cars = self.__salesman_service.get_available_cars()
             elif self.__choice == "3":
-                self.cars = self.__get_info.get_unavailable_cars()
+                self.cars = self.__salesman_service.get_unavailable_cars()
             elif self.__choice == "4":
-                plate_num, brand, size, location = self.__salesman.add_car()
-                self.__get_info.add_car_repo(plate_num, brand, size, location)
+                plate_num, brand, size, location = self.__salesman_menu.add_car()
+                self.__salesman_service.add_car_repo(plate_num, brand, size, location)
                 self.confirmation_str = "Car"
                 action = "added"
-                self.__salesman.confirmation(self.confirmation_str, action)
+                self.__salesman_menu.confirmation(self.confirmation_str, action)
                 #Add to log
-                self.__get_info.add_to_log(self.__ID, brand, plate_num)
+                self.__salesman_service.add_to_log(self.__ID, brand, plate_num)
 
 
             if self.__choice in ["1","2","3"]:
@@ -79,13 +81,13 @@ class Salesman_controller(object):
                     plate_number = car.get_plate_number()
                     brand = car.get_brand()
                     location = car.get_location_string()
-                    self.__salesman.car_lists(plate_number, brand, location)
+                    self.__salesman_menu.car_lists(plate_number, brand, location)
                 input("")
         elif self.__option == "5":
-            log = self.__get_info.get_log()
-            self.__salesman.print_log(log)
+            log = self.__salesman_service.get_log()
+            self.__salesman_menu.print_log(log)
             input("")
         elif self.__option == "6":
-            new_pw = self.__salesman.get_new_pw()
-            self.__get_info.change_pw(new_pw)
+            new_pw = self.__salesman_menu.get_new_pw()
+            self.__salesman_service.change_pw(new_pw)
             input("")

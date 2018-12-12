@@ -24,7 +24,7 @@ class Print_error():
     def Wrong_car_choice(self):
         os.system('cls||clear')
         print("Invalid car")
-        print("Choose option 1 - 5\n")
+        print("Choose options given\n")
         input("Press enter to continue ")
     
     def Wrong_key_pressed(self):

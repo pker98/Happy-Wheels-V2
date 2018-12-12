@@ -1,7 +1,6 @@
 import os
 
 class Print_salesman_menu(object):
-    
     def ID_menu(self):
         os.system("cls||clear")
         print("\t~Log in~")
@@ -53,7 +52,7 @@ class Print_salesman_menu(object):
         print(customer)
         print(orders)
         delete = ""
-        delete = input("Press d to delete customer.")
+        delete = input("Press d to delete customer: ")
         print("\n~~Customer orders~~\n")
         return delete
 

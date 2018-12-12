@@ -9,5 +9,5 @@ class Formulas:
         """ Calculates base price of car * days rented """
         pick_up, drop_off = date_list
         days = drop_off - pick_up
-        price = (base_price * days.days * TAX) + additional_price
+        price = int((base_price * days.days * TAX) + additional_price)
         return price

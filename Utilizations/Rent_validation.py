@@ -1,4 +1,3 @@
-
 import datetime
 
 class Rent_validation():
@@ -54,9 +53,14 @@ class Rent_validation():
         else:
             return False, page
 
-    def Check_car_choice(self, car_choice, page):
+    def Check_car_choice(self, car_choice, car_list, page):
         page = self.__check_nav.Check_if_nav(car_choice, page)  # Checks if user input is equal to p, m or X (navigation)
-        if car_choice in ("1", "2", "3", "4", "5"):
+        try:
+            int(car_choice)
+        except(ValueError):
+            return False, page
+
+        if 0 < int(car_choice) <= len(car_list):
             return True, page
         else:
             return False, page

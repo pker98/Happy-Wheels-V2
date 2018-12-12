@@ -23,7 +23,7 @@ class Rent_controller(object):
         self.section_valid = 0 # Used for Page 8 to navigate between personal information 1 and 2
 
         # While loop used so the user can navigate back and forth in the system
-        while Page < 13: # Stops running when user has completed the rental process
+        while 0 < Page < 13: # Stops running when user has completed the rental process
             # Variables
             if Page == 1:
                 # Open location menu - Returns location - Checks if correct input
@@ -32,7 +32,7 @@ class Rent_controller(object):
                 if Valid:
                     Page += 1   # Moves to next page
                 elif Page == 0:
-                    Page = 13
+                    pass
                 else:
                     self.error.Wrong_location() # Prints error message
 
@@ -72,7 +72,7 @@ class Rent_controller(object):
 
                 # Opens available cars menu - Returns chosen car - Checks if correct input
                 self.car_choice = self.__rent_menu.Page_4(available_car_string, self.size_string)
-                Valid, Page = self.__Rent_valid.Check_car_choice(self.car_choice, Page)
+                Valid, Page = self.__Rent_valid.Check_car_choice(self.car_choice, available_car_list, Page)
                 if Valid:
                     Page += 1   # Moves to next page
                 elif Page == 3:

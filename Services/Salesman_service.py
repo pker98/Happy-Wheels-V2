@@ -73,6 +73,8 @@ class Salesman_service(object):
             if key == email:
                 self.customer = value
                 return self.customer
+            else:
+                return "No customer found with that email."
     
     def order_string(self):
         """Returns a string of customer orders"""
@@ -82,9 +84,6 @@ class Salesman_service(object):
             order_string += "\n" + str(order) + "\n"
         return order_string
             
-
-
-
     def salesman_ID_pw(self,ID, pw):
         valid = False
         salesman_dict = self.salesman_info.get_salesmen()
@@ -114,7 +113,6 @@ class Salesman_service(object):
             for order in values:
                 if booking_num == order.get_order_num():
                     order_list.append(order)
-        
         return order_list
 
     def get_log(self):
